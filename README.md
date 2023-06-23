@@ -1,4 +1,4 @@
-# ![bowtie (blazor)](docs/images/bowtie_blazor.png "bowtie (blazor)") Blashing
+# ![bowtie (blazor)](docs/images/bowtie_blazor_logo.png "bowtie (blazor)") Blashing
 
 > A port/rewrite of Dashing / Smashing in Blazor
 
@@ -17,9 +17,9 @@ Inspired by [Dashing](https://github.com/Shopify/dashing) [Smashing](https://git
 Add widgets for:
 
 - clock (WIP)
-- comments
-- graph
-- iframe
+- comments (WIP)
+- graph (WIP)
+- iframe (WIP)
 - image
 - list
 - meter
