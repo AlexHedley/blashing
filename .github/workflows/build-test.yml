@@ -66,7 +66,7 @@ jobs:
         # historydir: '' # Optional directory for storing persistent coverage information. Can be used in future reports to show coverage evolution.
         # plugins: '' # Optional plugin files for custom reports or custom history storage (separated by semicolon).
         assemblyfilters: '+Blashing*;-XUnit.*;-Bunit.*;-AltCover.*;-AngleSharpWrappers' # Optional list of assemblies that should be included or excluded in the report. Exclusion filters take precedence over inclusion filters. Wildcards are allowed.
-        classfilters: '+*;-Blashing.Tests' # Optional list of classes that should be included or excluded in the report. Exclusion filters take precedence over inclusion filters. Wildcards are allowed.
+        classfilters: '+*;-Blashing.Core.Tests' # Optional list of classes that should be included or excluded in the report. Exclusion filters take precedence over inclusion filters. Wildcards are allowed.
         filefilters: '+*' # Optional list of files that should be included or excluded in the report. Exclusion filters take precedence over inclusion filters. Wildcards are allowed.
         verbosity: 'Info' # The verbosity level of the log messages. Values: Verbose, Info, Warning, Error, Off
         # title: '' # Optional title.
@@ -83,13 +83,13 @@ jobs:
     
     # https://github.com/zyborg/dotnet-tests-report
     # https://github.com/marketplace/actions/dotnet-tests-report
-    - name: 🧪 Unit Tests - Blashing
+    - name: 🧪 Unit Tests - Blashing Core
       uses: zyborg/dotnet-tests-report@v1
       with:
-        project_path: src/Blashing.Tests
-        report_name: Blashing Tests
-        report_title: Blashing Tests
+        project_path: src/Blashing.Core.Tests
+        report_name: Blashing Core Tests
+        report_title: Blashing Core Tests
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        gist_name: blashing_tests.md
-        gist_badge_label: 'Blashing: %Counters_passed%/%Counters_total%'
+        gist_name: blashing_core_tests.md
+        gist_badge_label: 'Blashing Core: %Counters_passed%/%Counters_total%'
         gist_token: ${{ secrets.GIST_TOKEN }}
