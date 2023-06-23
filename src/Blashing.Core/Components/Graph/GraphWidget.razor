@@ -1,0 +1,15 @@
+﻿<div class="widget-graph">
+    <h1 class="title">@Title</h1>
+
+    <h2 class="value" data-bind="current | prettyNumber | prepend prefix | append suffix"></h2>
+
+    <p class="more-info">@MoreInfo</p>
+</div>
+
+@code {
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public string? MoreInfo { get; set; }
+}
