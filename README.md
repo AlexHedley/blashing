@@ -1,4 +1,6 @@
-# Blashing
+# ![bowtie (blazor)](docs/images/bowtie_blazor.png "bowtie (blazor)") Blashing
+
+> An rewrite of Dashing / Smashing in Blazor
 
 > Build a beautiful dashboard
 
