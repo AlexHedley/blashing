@@ -6,6 +6,8 @@
 [![Blazor](https://img.shields.io/badge/blazor-%235C2D91.svg?style=for-the-badge&logo=blazor&logoColor=white)](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=for-the-badge)](LICENSE) <!-- https://opensource.org/licenses/MIT -->
 
+[![🔨 Build / 🧪 Test (with 📊 Reports)](https://github.com/AlexHedley/blashing/actions/workflows/build-test.yml/badge.svg)](https://github.com/AlexHedley/blashing/actions/workflows/build-test.yml)
+
 Inspired by [Dashing](https://github.com/Shopify/dashing) [Smashing](https://github.com/Smashing/smashing)
 
 ## Todo
@@ -22,10 +24,14 @@ Add widgets for:
 - number
 - text (WIP)
 
-# src
+## Reports
+
+- [gist](https://gist.github.com/AlexHedley/867fcfe2ac7154c6b610c8189adac06c)
+
+## src
 
 - [src](src/)
 
-# Docs
+## Docs
 
 - [docs](docs/README.md)
