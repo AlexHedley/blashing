@@ -1,0 +1,21 @@
+﻿.widget-meter {
+   background-color: #9c4274;
+}
+
+input.meter {
+    background-color: #9c4274; //darken(#9c4274, 15%);
+    color: #fff;
+    filter: brightness(0.85);
+}
+
+.title {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.more-info {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.updated-at {
+    color: rgba(0, 0, 0, 0.3);
+}

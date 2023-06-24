@@ -26,6 +26,9 @@ Add widgets for:
 - number
 - text (WIP)
 
+
+![Progress](docs/images/progress/progress.png "Progress")
+
 ## Reports
 
 - [gist](https://gist.github.com/AlexHedley/867fcfe2ac7154c6b610c8189adac06c)

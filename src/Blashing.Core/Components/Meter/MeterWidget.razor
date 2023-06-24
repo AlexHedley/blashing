@@ -1,0 +1,52 @@
+﻿<div class="widget-meter">
+    <h1 class="title">@Title</h1>
+    
+    <input class="meter" 
+           data-angleOffset=-125 
+           data-angleArc=250 
+           data-bind-data-height="height | default 200" 
+           data-bind-data-width="width | default 200" 
+           data-readOnly=true 
+           data-bind-value="value | shortenedNumber | prepend prefix | append suffix" 
+           data-bind-data-min="min" 
+           data-bind-data-max="max">
+    
+    <p class="more-info">@MoreInfo</p>
+    
+    <p class="updated-at">@UpdatedAtMessage</p>
+</div>
+
+@code {
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public string? MoreInfo { get; set; }
+
+    [Parameter]
+    public string? UpdatedAtMessage { get; set; }
+    
+    [Parameter]
+    public long AngleOffset { get; set; }
+    
+    [Parameter]
+    public long AngleArc { get; set; }
+    
+    [Parameter]
+    public long Height { get; set; }
+    
+    [Parameter]
+    public long Width { get; set; }
+    
+    [Parameter]
+    public bool ReadOnly { get; set; }
+    
+    [Parameter]
+    public long Value { get; set; }
+    
+    [Parameter]
+    public long Min { get; set; }
+    
+    [Parameter]
+    public long Max { get; set; }
+}
