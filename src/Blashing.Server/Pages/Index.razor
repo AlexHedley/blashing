@@ -5,6 +5,7 @@
 @using Blashing.Core.Components.Graph;
 @using Blashing.Core.Components.IFrame;
 @using Blashing.Core.Components.Image;
+@using Blashing.Core.Components.List;
 @using Blashing.Core.Components.Text;
 
 <PageTitle>Index</PageTitle>
@@ -26,3 +27,9 @@ Welcome to your new app.
 <IFrameWidget Url="https://www.alexhedley.com/" />
 
 <ImageWidget Src="https://www.alexhedley.com/images/icon-myapps.png" Width="100px" />
+
+<ListWidget Title="List Title" MoreInfo="List Title More Info" UpdatedAtMessage="@DateTime.Now.ToLongDateString()" Items="@Items" />
+
+@code {
+    List<(string label, string value)>? Items = new() { ("a", "b"), ("c", "d") };
+}

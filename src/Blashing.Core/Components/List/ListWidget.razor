@@ -1,0 +1,40 @@
+﻿<div class="widget-list">
+    <h1 class="title">@Title</h1>
+    
+    <ol>
+      @foreach (var item in Items)
+      {
+        <li>
+          <span class="label">@item.label</span>
+          <span class="value">@item.value</span>
+        </li>
+      }
+    </ol>
+    
+  <ul class="list-nostyle">
+    @foreach (var item in Items)
+    {
+      <li>
+        <span class="label">@item.label</span>
+        <span class="value">@item.value</span>
+      </li>
+    }
+  </ul>
+    
+    <p class="more-info">@MoreInfo</p>
+    <p class="updated-at">@UpdatedAtMessage</p>
+</div>
+
+@code {
+  [Parameter]
+  public string? Title { get; set; }
+
+  [Parameter]
+  public string? MoreInfo { get; set; }
+
+  [Parameter]
+  public string? UpdatedAtMessage { get; set; }
+  
+  [Parameter]
+  public List<(string label, string value)>? Items { get; set; }
+}
