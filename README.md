@@ -39,3 +39,5 @@ Add widgets for:
 ## Docs
 
 - [docs](docs/README.md)
+
+![Original Screenshot](docs/images/progress/Original_screenshot.png "Original Screenshot")
