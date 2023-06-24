@@ -16,16 +16,15 @@ Inspired by [Dashing](https://github.com/Shopify/dashing) [Smashing](https://git
 
 Add widgets for:
 
-- clock (WIP)
-- comments (WIP)
-- graph (WIP)
-- iframe (WIP)
+- clock
+- comments
+- graph
+- iframe
 - image
 - list
 - meter
 - number
-- text (WIP)
-
+- text
 
 ![Progress](docs/images/progress/progress.png "Progress")
 
