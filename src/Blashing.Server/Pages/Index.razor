@@ -7,6 +7,7 @@
 @using Blashing.Core.Components.Image;
 @using Blashing.Core.Components.List;
 @using Blashing.Core.Components.Meter;
+@using Blashing.Core.Components.Number;
 @using Blashing.Core.Components.Text;
 
 <PageTitle>Index</PageTitle>
@@ -32,6 +33,8 @@ Welcome to your new app.
 <ListWidget Title="List Title" MoreInfo="List More Info" UpdatedAtMessage="@DateTime.Now.ToLongDateString()" Items="@Items" />
 
 <MeterWidget Title="Meter Title" MoreInfo="MeterMore Info" UpdatedAtMessage="@DateTime.Now.ToLongDateString()" />
+
+<NumberWidget Title="Number Title" Current="Number Current" Difference="Number Difference" MoreInfo="Number More Info" UpdatedAtMessage="Number Updated At Message" />
 
 @code {
     List<(string label, string value)>? Items = new() { ("a", "b"), ("c", "d") };
