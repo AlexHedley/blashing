@@ -1,0 +1,11 @@
+﻿<div class="widget-image">
+    <img data-bind-src="image | prepend '/assets'" src="@Src" width="@Width"/>
+</div>
+
+@code {
+    [Parameter]
+    public string? Src { get; set; }
+    
+    [Parameter]
+    public string? Width { get; set; }
+}
