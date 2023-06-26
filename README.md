@@ -40,4 +40,4 @@ Add widgets for:
 
 - [docs](docs/README.md)
 
-![Original Screenshot](docs/images/progress/Original_screenshot.png "Original Screenshot")
+![Original Screenshot](docs/images/progress/original_screenshot.png "Original Screenshot")
