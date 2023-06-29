@@ -28,6 +28,12 @@ Add widgets for:
 
 ![Progress](docs/images/progress/progress.png "Progress")
 
+## Tests
+
+`cd src`
+
+`dotnet test --collect:"XPlat Code Coverage"`
+
 ## Reports
 
 - [gist](https://gist.github.com/AlexHedley/867fcfe2ac7154c6b610c8189adac06c)
