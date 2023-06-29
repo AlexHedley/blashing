@@ -26,7 +26,10 @@ Add widgets for:
 - number
 - text
 
-![Progress](docs/images/progress/progress.png "Progress")
+<!-- ![Progress](docs/images/progress/progress.png "Progress") -->
+![Demo](docs/images/progress/demo.png "Demo")
+
+![Original Screenshot](docs/images/progress/original_screenshot.png "Original Screenshot")
 
 ## Tests
 
@@ -45,5 +48,3 @@ Add widgets for:
 ## Docs
 
 - [docs](docs/README.md)
-
-![Original Screenshot](docs/images/progress/original_screenshot.png "Original Screenshot")
