@@ -15,6 +15,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.8" PrivateAssets="all" />
+    <PackageReference Include="Excubo.Blazor.Grids" Version="3.1.14" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,4 +23,8 @@
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
+
+  <!--<ItemGroup>
+    <None Update="Pages/*.razor.css" CssScope="inherit-scope" />
+  </ItemGroup>-->
 </Project>
