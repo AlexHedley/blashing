@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, p {
     padding: 0;
     margin: 0;
 }
+
 h1 {
     margin-bottom: 12px;
     text-align: center;
@@ -142,7 +143,8 @@ h3 {
 
 .widget.status-warning {
     background-color: #eeae32;
-    @include animation(status-warning-background, 2s, ease, infinite);
+/*    @include animation(status-warning-background, 2s, ease, infinite);*/
+}
 
 .icon-warning-sign {
     display: inline-block;
@@ -155,15 +157,16 @@ h3 {
 .widget.status-danger {
     color: #fff;
     background-color: #e82711;
-    @include animation(status-danger-background, 2s, ease, infinite);
+/*    @include animation(status-danger-background, 2s, ease, infinite);*/
+}
 
 .icon-warning-sign {
     display: inline-block;
 }
 
-.title, .more-info {
+/*.title, .more-info {
     color: #fff;
-}
+}*/
 
 .more-info {
     font-size: 15px;

@@ -1,5 +1,13 @@
 ﻿.widget-meter {
-   background-color: #9c4274;
+    background-color: #9c4274;
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+/*    width: inherit;*/
+/*    height: inherit;*/
+/*    display: table-cell;*/
+    vertical-align: middle;
 }
 
 input.meter {
@@ -18,4 +26,32 @@ input.meter {
 
 .updated-at {
     color: rgba(0, 0, 0, 0.3);
+}
+
+.more-info {
+    font-size: 15px;
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+}
+
+.updated-at {
+    font-size: 15px;
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
 }

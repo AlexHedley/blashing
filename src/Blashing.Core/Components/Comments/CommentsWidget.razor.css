@@ -1,5 +1,13 @@
 .widget-comments {
     background-color: #eb9c3c;
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+/*    width: inherit;*/
+/*    height: inherit;*/
+/*    display: table-cell;*/
+    vertical-align: middle;
 }
 
 .title {
@@ -17,4 +25,30 @@
 
 .more-info {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.more-info {
+    font-size: 15px;
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
 }
