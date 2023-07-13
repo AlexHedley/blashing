@@ -45,6 +45,12 @@ Add widgets for:
 
 - [src](src/)
 
+## Sample
+
+Ran the example [smashing](https://github.com/Smashing/smashing) locally and took a copy of the served webpage for comparison.
+
+- [sample](index.html)
+
 ## Docs
 
 - [docs](docs/README.md)

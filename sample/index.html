@@ -1,0 +1,540 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>My super sweet dashboard</title>
+
+    <!-- The javascript and css are managed by sprockets. The files can be found in the /assets folder-->
+    <!-- <script type="text/javascript" src="javascripts/application.js"></script> -->
+    <link rel="stylesheet" href="stylesheets/application.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="icon" href="favicon.ico" />
+
+    <style id="gridster-stylesheet" type="text/css">
+      [data-col="1"] {
+        left: 5px;
+      }
+      [data-col="2"] {
+        left: 310px;
+      }
+      [data-col="3"] {
+        left: 615px;
+      }
+      [data-col="4"] {
+        left: 920px;
+      }
+      [data-col="5"] {
+        left: 1225px;
+      }
+      [data-row="1"] {
+        top: 5px;
+      }
+      [data-row="2"] {
+        top: 370px;
+      }
+      [data-row="3"] {
+        top: 735px;
+      }
+      [data-row="4"] {
+        top: 1100px;
+      }
+      [data-row="5"] {
+        top: 1465px;
+      }
+      [data-row="6"] {
+        top: 1830px;
+      }
+      [data-row="7"] {
+        top: 2195px;
+      }
+      [data-row="8"] {
+        top: 2560px;
+      }
+      [data-row="9"] {
+        top: 2925px;
+      }
+      [data-row="10"] {
+        top: 3290px;
+      }
+      [data-row="11"] {
+        top: 3655px;
+      }
+      [data-row="12"] {
+        top: 4020px;
+      }
+      [data-row="13"] {
+        top: 4385px;
+      }
+      [data-row="14"] {
+        top: 4750px;
+      }
+      [data-row="15"] {
+        top: 5115px;
+      }
+      [data-row="16"] {
+        top: 5480px;
+      }
+      [data-sizey="1"] {
+        height: 360px;
+      }
+      [data-sizey="2"] {
+        height: 725px;
+      }
+      [data-sizey="3"] {
+        height: 1090px;
+      }
+      [data-sizey="4"] {
+        height: 1455px;
+      }
+      [data-sizey="5"] {
+        height: 1820px;
+      }
+      [data-sizey="6"] {
+        height: 2185px;
+      }
+      [data-sizey="7"] {
+        height: 2550px;
+      }
+      [data-sizey="8"] {
+        height: 2915px;
+      }
+      [data-sizey="9"] {
+        height: 3280px;
+      }
+      [data-sizey="10"] {
+        height: 3645px;
+      }
+      [data-sizey="11"] {
+        height: 4010px;
+      }
+      [data-sizey="12"] {
+        height: 4375px;
+      }
+      [data-sizey="13"] {
+        height: 4740px;
+      }
+      [data-sizey="14"] {
+        height: 5105px;
+      }
+      [data-sizey="15"] {
+        height: 5470px;
+      }
+      [data-sizex="1"] {
+        width: 300px;
+      }
+      [data-sizex="2"] {
+        width: 605px;
+      }
+      [data-sizex="3"] {
+        width: 910px;
+      }
+      [data-sizex="4"] {
+        width: 1215px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="gridster ready" style="width: 1240px">
+        <ul style="height: 735px; width: 1225px; position: relative">
+          <li
+            data-row="2"
+            data-col="2"
+            data-sizex="2"
+            data-sizey="1"
+            class="gs-w"
+          >
+            <div
+              data-id="welcome"
+              data-title="Hello"
+              data-text="This is your shiny new dashboard."
+              data-moreinfo="Protip: You can drag the widgets around!"
+              class="widget widget-text welcome"
+            >
+              <h1 class="title" data-bind="title">Hello</h1>
+
+              <h3 data-bind="text">This is your shiny new dashboard.</h3>
+
+              <p class="more-info" data-bind="moreinfo">
+                Protip: You can drag the widgets around!
+              </p>
+
+              <p class="updated-at" data-bind="updatedAtMessage"></p>
+            </div>
+          </li>
+
+          <li
+            data-row="2"
+            data-col="1"
+            data-sizex="1"
+            data-sizey="1"
+            class="gs-w"
+          >
+            <div
+              data-id="synergy"
+              data-title="Synergy"
+              data-height="200"
+              data-width="200"
+              data-min="0"
+              data-max="100"
+              data-suffix="%"
+              class="widget widget-meter synergy"
+            >
+              <h1 class="title" data-bind="title">Synergy</h1>
+
+              <div style="display: inline; width: 200px; height: 200px">
+                <canvas width="200" height="200px"></canvas
+                ><input
+                  class="meter"
+                  data-angleoffset="-125"
+                  data-anglearc="250"
+                  data-bind-data-height="height | default 200"
+                  data-bind-data-width="width | default 200"
+                  data-readonly="true"
+                  data-bind-value="value | shortenedNumber | prepend prefix | append suffix"
+                  data-bind-data-min="min"
+                  data-bind-data-max="max"
+                  data-height="200"
+                  data-width="200"
+                  data-min="0"
+                  data-max="100"
+                  data-bgcolor="rgb(102, 43, 76)"
+                  data-fgcolor="rgb(255, 255, 255)"
+                  readonly="readonly"
+                  style="
+                    width: 104px;
+                    height: 66px;
+                    position: absolute;
+                    vertical-align: middle;
+                    margin-top: 66px;
+                    margin-left: -152px;
+                    border: 0px;
+                    background: none;
+                    font: bold 40px Arial;
+                    text-align: center;
+                    color: rgb(255, 255, 255);
+                    padding: 0px;
+                    appearance: none;
+                  "
+                />
+              </div>
+
+              <p class="more-info" data-bind="moreinfo"></p>
+
+              <p class="updated-at" data-bind="updatedAtMessage">
+                Last updated at 8:36
+              </p>
+            </div>
+          </li>
+
+          <li
+            data-row="1"
+            data-col="4"
+            data-sizex="1"
+            data-sizey="2"
+            class="gs-w"
+          >
+            <div
+              data-id="buzzwords"
+              data-unordered="true"
+              data-title="Buzzwords"
+              data-moreinfo="# of times said around the office"
+              class="widget widget-list buzzwords"
+            >
+              <h1 class="title" data-bind="title">Buzzwords</h1>
+
+              <ul class="list-nostyle">
+                <!--start item-1-->
+                <li>
+                  <span class="label" data-bind="item.label">Enterprise</span>
+                  <span class="value" data-bind="item.value">15</span>
+                </li>
+                <li>
+                  <span class="label" data-bind="item.label">Web 2.0</span>
+                  <span class="value" data-bind="item.value">13</span>
+                </li>
+                <li>
+                  <span class="label" data-bind="item.label"
+                    >Paradigm shift</span
+                  >
+                  <span class="value" data-bind="item.value">15</span>
+                </li>
+                <li>
+                  <span class="label" data-bind="item.label">Pivoting</span>
+                  <span class="value" data-bind="item.value">18</span>
+                </li>
+                <li>
+                  <span class="label" data-bind="item.label"
+                    >Streamlininess</span
+                  >
+                  <span class="value" data-bind="item.value">8</span>
+                </li>
+                <li>
+                  <span class="label" data-bind="item.label"
+                    >Exit strategy</span
+                  >
+                  <span class="value" data-bind="item.value">9</span>
+                </li>
+                <li>
+                  <span class="label" data-bind="item.label">Leverage</span>
+                  <span class="value" data-bind="item.value">12</span>
+                </li>
+                <li>
+                  <span class="label" data-bind="item.label">Turn-key</span>
+                  <span class="value" data-bind="item.value">8</span>
+                </li>
+                <li>
+                  <span class="label" data-bind="item.label">Synergy</span>
+                  <span class="value" data-bind="item.value">16</span>
+                </li>
+                <!--end item-1-->
+              </ul>
+
+              <p class="more-info" data-bind="moreinfo">
+                # of times said around the office
+              </p>
+              <p class="updated-at" data-bind="updatedAtMessage">
+                Last updated at 8:36
+              </p>
+            </div>
+          </li>
+
+          <li
+            data-row="1"
+            data-col="3"
+            data-sizex="1"
+            data-sizey="1"
+            class="gs-w"
+          >
+            <div
+              data-id="valuation"
+              data-title="Current Valuation"
+              data-moreinfo="In billions"
+              data-prefix="$"
+              class="widget widget-number valuation"
+            >
+              <h1 class="title" data-bind="title">Current Valuation</h1>
+
+              <h2
+                class="value"
+                data-bind="current | shortenedNumber | prepend prefix | append suffix"
+              >
+                $51
+              </h2>
+
+              <p class="change-rate">
+                <i data-bind-class="arrow" class="fa fa-arrow-down"></i
+                ><span data-bind="difference">38%</span>
+              </p>
+
+              <p class="more-info" data-bind="moreinfo">In billions</p>
+
+              <p class="updated-at" data-bind="updatedAtMessage">
+                Last updated at 8:36
+              </p>
+            </div>
+          </li>
+
+          <li
+            data-row="1"
+            data-col="1"
+            data-sizex="2"
+            data-sizey="1"
+            class="gs-w"
+          >
+            <div
+              data-id="convergence"
+              data-title="Convergence"
+              style="background-color: #ff9618"
+              class="widget widget-graph convergence rickshaw_graph"
+            >
+              <h1 class="title" data-bind="title">Convergence</h1>
+
+              <h2
+                class="value"
+                data-bind="current | prettyNumber | prepend prefix | append suffix"
+              >
+                37
+              </h2>
+
+              <p class="more-info" data-bind="moreinfo"></p>
+              <svg width="610" height="360">
+                <path
+                  d="M11.726259131103859,124.70588235294116Q68.18602531789807,332.8104575163399,76.8721431927895,336.47058823529414C89.90132000512662,341.9607843137255,128.98885044213802,212.54901960784312,142.01802725447513,179.6078431372549S194.13473450382367,14.901960784313669,207.16391131616078,7.058823529411711S259.28061856550926,87.05882352941177,272.3097953778464,101.1764705882353S324.42650262719485,123.13725490196077,337.455679439532,148.23529411764704S389.57238668888056,356.078431372549,402.6015635012177,352.156862745098S454.71827075056615,121.56862745098037,467.7474475629033,109.01960784313724S519.8641548122517,230.58823529411765,532.8933316245889,226.66666666666666Q541.5794494994803,224.05228758169935,598.0392156862746,69.8039215686274L598.0392156862746,360Q541.5794494994803,360,532.8933316245889,360C519.8641548122517,360,480.77662437524043,360,467.7474475629033,360S415.63074031355484,360,402.6015635012177,360S350.48485625186913,360,337.455679439532,360S285.33897219018354,360,272.3097953778464,360S220.1930881284979,360,207.16391131616078,360S155.04720406681224,360,142.01802725447513,360S89.90132000512662,360,76.8721431927895,360Q68.18602531789807,360,11.726259131103859,360Z"
+                  fill="#fff"
+                  stroke="none"
+                  stroke-width="2"
+                  class="undefined"
+                ></path>
+                <g class="y_ticks plain">
+                  <g
+                    class="tick major"
+                    transform="translate(0,360)"
+                    style="opacity: 1"
+                  >
+                    <line x2="4" y2="0"></line>
+                    <text
+                      x="7"
+                      y="0"
+                      dy=".32em"
+                      style="text-anchor: start"
+                    ></text>
+                  </g>
+                  <g
+                    class="tick major"
+                    transform="translate(0,281.5686274509804)"
+                    style="opacity: 1"
+                  >
+                    <line x2="4" y2="0"></line>
+                    <text x="7" y="0" dy=".32em" style="text-anchor: start">
+                      10
+                    </text>
+                  </g>
+                  <g
+                    class="tick major"
+                    transform="translate(0,203.13725490196077)"
+                    style="opacity: 1"
+                  >
+                    <line x2="4" y2="0"></line>
+                    <text x="7" y="0" dy=".32em" style="text-anchor: start">
+                      20
+                    </text>
+                  </g>
+                  <g
+                    class="tick major"
+                    transform="translate(0,124.70588235294116)"
+                    style="opacity: 1"
+                  >
+                    <line x2="4" y2="0"></line>
+                    <text x="7" y="0" dy=".32em" style="text-anchor: start">
+                      30
+                    </text>
+                  </g>
+                  <g
+                    class="tick major"
+                    transform="translate(0,46.274509803921546)"
+                    style="opacity: 1"
+                  >
+                    <line x2="4" y2="0"></line>
+                    <text x="7" y="0" dy=".32em" style="text-anchor: start">
+                      40
+                    </text>
+                  </g>
+                  <path class="domain" d="M4,0H0V360H4"></path>
+                </g>
+                <g class="y_grid">
+                  <g
+                    class="tick major"
+                    transform="translate(0,360)"
+                    style="opacity: 1"
+                  >
+                    <line x2="610" y2="0"></line>
+                    <text
+                      x="613"
+                      y="0"
+                      dy=".32em"
+                      style="text-anchor: start"
+                    ></text>
+                  </g>
+                  <g
+                    class="tick major"
+                    transform="translate(0,281.5686274509804)"
+                    style="opacity: 1"
+                  >
+                    <line x2="610" y2="0"></line>
+                    <text x="613" y="0" dy=".32em" style="text-anchor: start">
+                      10
+                    </text>
+                  </g>
+                  <g
+                    class="tick major"
+                    transform="translate(0,203.13725490196077)"
+                    style="opacity: 1"
+                  >
+                    <line x2="610" y2="0"></line>
+                    <text x="613" y="0" dy=".32em" style="text-anchor: start">
+                      20
+                    </text>
+                  </g>
+                  <g
+                    class="tick major"
+                    transform="translate(0,124.70588235294116)"
+                    style="opacity: 1"
+                  >
+                    <line x2="610" y2="0"></line>
+                    <text x="613" y="0" dy=".32em" style="text-anchor: start">
+                      30
+                    </text>
+                  </g>
+                  <g
+                    class="tick major"
+                    transform="translate(0,46.274509803921546)"
+                    style="opacity: 1"
+                  >
+                    <line x2="610" y2="0"></line>
+                    <text x="613" y="0" dy=".32em" style="text-anchor: start">
+                      40
+                    </text>
+                  </g>
+                  <path class="domain" d="M610,0H0V360H610"></path>
+                </g>
+              </svg>
+              <div class="x_tick plain" style="left: 11.7263px">
+                <div class="title">55s</div>
+              </div>
+              <div class="x_tick plain" style="left: 76.8721px">
+                <div class="title">56s</div>
+              </div>
+              <div class="x_tick plain" style="left: 142.018px">
+                <div class="title">57s</div>
+              </div>
+              <div class="x_tick plain" style="left: 207.164px">
+                <div class="title">58s</div>
+              </div>
+              <div class="x_tick plain" style="left: 272.31px">
+                <div class="title">59s</div>
+              </div>
+              <div class="x_tick plain" style="left: 337.456px">
+                <div class="title">0s</div>
+              </div>
+              <div class="x_tick plain" style="left: 402.602px">
+                <div class="title">1s</div>
+              </div>
+              <div class="x_tick plain" style="left: 467.747px">
+                <div class="title">2s</div>
+              </div>
+              <div class="x_tick plain" style="left: 532.893px">
+                <div class="title">3s</div>
+              </div>
+              <div class="x_tick plain" style="left: 598.039px">
+                <div class="title">4s</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <center>
+          <div style="font-size: 12px">
+            Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey,
+            Look what I can do!" }' \http://0.0.0.0:3030/widgets/welcome
+          </div>
+        </center>
+      </div>
+    </div>
+
+    <div id="saving-instructions">
+      <p>Paste the following at the top of <i>sample.erb</i></p>
+      <textarea id="gridster-code"></textarea>
+    </div>
+    <a href="#saving-instructions" id="save-gridster">Save this layout</a>
+
+    <div id="lean_overlay"></div>
+  </body>
+</html>
