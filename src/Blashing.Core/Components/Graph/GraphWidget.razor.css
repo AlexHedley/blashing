@@ -1,14 +1,17 @@
 .widget-graph {
-    background-color: #dc5945;
+    background-color: #ff9618; /*#dc5945;*/
     position: relative;
     height: 100%;
     width: 100%;
-
     text-align: center;
-/*    width: inherit;*/
-/*    height: inherit;*/
-/*    display: table-cell;*/
+    /*    width: inherit;*/
+    /*    height: inherit;*/
+    /*    display: table-cell;*/
     vertical-align: middle;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
 }
 
 svg {

@@ -2,12 +2,15 @@
     background-color: #eb9c3c;
     height: 100%;
     width: 100%;
-
     text-align: center;
-/*    width: inherit;*/
-/*    height: inherit;*/
-/*    display: table-cell;*/
+    /*    width: inherit;*/
+    /*    height: inherit;*/
+    /*    display: table-cell;*/
     vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
 }
 
 .title {

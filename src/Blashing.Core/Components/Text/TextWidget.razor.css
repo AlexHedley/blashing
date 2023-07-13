@@ -2,12 +2,18 @@
     background-color: #ec663c;
     height: 100%;
     width: 100%;
-
     text-align: center;
-    /*    width: inherit;*/
-    /*    height: inherit;*/
-    /*    display: table-cell;*/
-    vertical-align: middle;
+    /*width: inherit;*/
+    /*height: inherit;*/
+    /*display: table-cell;*/ /* Parent: "display: table;" */
+    /*vertical-align: middle;*/
+    /*line-height: ;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
 }
 
 .title {

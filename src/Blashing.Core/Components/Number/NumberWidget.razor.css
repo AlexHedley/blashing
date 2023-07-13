@@ -2,12 +2,14 @@
     background-color: #47bbb3;
     height: 100%;
     width: 100%;
-
     text-align: center;
-/*    width: inherit;*/
-/*    height: inherit;*/
-/*    display: table-cell;*/
-    vertical-align: middle;
+    /*width: inherit;*/
+    /*height: inherit;*/
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
    
 .title {
