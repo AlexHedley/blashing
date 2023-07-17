@@ -9,6 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=for-the-badge)](LICENSE) <!-- https://opensource.org/licenses/MIT -->
 
 [![🔨 Build / 🧪 Test (with 📊 Reports)](https://github.com/AlexHedley/blashing/actions/workflows/build-test.yml/badge.svg)](https://github.com/AlexHedley/blashing/actions/workflows/build-test.yml)
+![Badge](https://gist.githubusercontent.com/AlexHedley/867fcfe2ac7154c6b610c8189adac06c/raw/blashing_core_tests.md_badge.svg "Badge")
 
 Inspired by [Dashing](https://github.com/Shopify/dashing) [Smashing](https://github.com/Smashing/smashing)
 
@@ -38,6 +39,8 @@ Add widgets for:
 `dotnet test --collect:"XPlat Code Coverage"`
 
 ## Reports
+
+![Badge](https://gist.githubusercontent.com/AlexHedley/867fcfe2ac7154c6b610c8189adac06c/raw/blashing_core_tests.md_badge.svg "Badge")
 
 - [gist](https://gist.github.com/AlexHedley/867fcfe2ac7154c6b610c8189adac06c)
 
