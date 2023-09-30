@@ -57,3 +57,5 @@ Ran the example [smashing](https://github.com/Smashing/smashing) locally and too
 ## Docs
 
 - [docs](docs/README.md)
+
+![Original Screenshot](docs/images/progress/original_screenshot.png "Original Screenshot")
