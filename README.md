@@ -10,8 +10,13 @@
 
 [![🔨 Build / 🧪 Test (with 📊 Reports)](https://github.com/AlexHedley/blashing/actions/workflows/build-test.yml/badge.svg)](https://github.com/AlexHedley/blashing/actions/workflows/build-test.yml)
 ![Badge](https://gist.githubusercontent.com/AlexHedley/867fcfe2ac7154c6b610c8189adac06c/raw/blashing_core_tests.md_badge.svg "Badge")
+[![Deploy to GitHub Pages](https://github.com/AlexHedley/blashing/actions/workflows/deploy-site.yml/badge.svg)](https://github.com/AlexHedley/blashing/actions/workflows/deploy-site.yml) [![pages-build-deployment](https://github.com/AlexHedley/blashing/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/AlexHedley/blashing/actions/workflows/pages/pages-build-deployment)
 
 Inspired by [Dashing](https://github.com/Shopify/dashing) [Smashing](https://github.com/Smashing/smashing)
+
+## Site
+
+- [https://alexhedley.github.io/blashing/](https://alexhedley.github.io/blashing/)
 
 ## Todo
 
@@ -57,5 +62,3 @@ Ran the example [smashing](https://github.com/Smashing/smashing) locally and too
 ## Docs
 
 - [docs](docs/README.md)
-
-![Original Screenshot](docs/images/progress/original_screenshot.png "Original Screenshot")
