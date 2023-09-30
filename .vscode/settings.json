@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "Blashing"
-    ]
+    ],
+    "dotnet.defaultSolution": "src\\Blashing.sln"
 }
