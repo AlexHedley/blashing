@@ -30,10 +30,10 @@ jobs:
     - name: 🛎️ Checkout
       uses: actions/checkout@v4
     
-    - name: Setup .NET 7.0
+    - name: ⚙️ Setup .NET 8.0
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '7.0.x'
+        dotnet-version: '8.0.x'
         # include-prerelease: true
     
     - name: ⬇️ Restore dependencies
@@ -49,7 +49,7 @@ jobs:
       run: dotnet test --collect:"XPlat Code Coverage"
       working-directory: src
       
-    - name: Publish Test Results
+    - name: 🚀 Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action@v2
       if: always()
       with:
@@ -57,7 +57,7 @@ jobs:
     
     # ReportGenerator -reports:"src/**/TestResults/**/coverage.cobertura.xml" -targetdir:coveragereport
     - name: 📊 ReportGenerator
-      uses: danielpalme/ReportGenerator-GitHub-Action@5.2.1
+      uses: danielpalme/ReportGenerator-GitHub-Action@5.3.0
       with:
         reports: 'src/**/TestResults/**/coverage.cobertura.xml' # REQUIRED # The coverage reports that should be parsed (separated by semicolon). Globbing is supported.
         targetdir: 'coveragereport' # REQUIRED # The directory where the generated report should be saved.
@@ -76,7 +76,7 @@ jobs:
         toolpath: 'reportgeneratortool' # Default directory for installing the dotnet tool.
     
     - name: ⬆️ 📊 Upload coverage report artifact
-      uses: actions/upload-artifact@v4.3.1
+      uses: actions/upload-artifact@v4.3.3
       with:
         name: CoverageReport # Artifact name        
         path: coveragereport # Directory containing files to upload
