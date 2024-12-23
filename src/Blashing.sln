@@ -1,4 +1,3 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
@@ -10,6 +9,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blashing.Core.Tests", "Blashing.Core.Tests\Blashing.Core.Tests.csproj", "{4A7A9E14-B378-4203-970B-7486D3D1888C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blashing.Client", "Blashing.Client\Blashing.Client.csproj", "{77BD090A-0069-4437-A6DF-AF0E802EF36C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{5FC49982-D13C-47B9-A1D7-933224EF09E5}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\build-test.yml = ..\.github\workflows\build-test.yml
+		..\.github\workflows\deploy-site.yml = ..\.github\workflows\deploy-site.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
