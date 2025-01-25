@@ -1,0 +1,23 @@
+@using Blashing.Core.Components.IFrame
+
+@attribute [Stories("Example/IFrame")]
+
+<Stories TComponent="IFrameWidget">
+
+    <ArgType For="_ => _.Url" Control="ControlType.Default" />
+
+    <Story Name="Default">
+
+        <Arguments>
+            <Arg For="_ => _.Url" Value='"https://www.alexhedley.com/"' />
+        </Arguments>
+
+        <Template>
+            <IFrameWidget @attributes="context.Args">
+            </IFrameWidget>
+            @* <IFrameWidget Url="https://www.alexhedley.com/" /> *@
+        </Template>
+
+    </Story>
+
+</Stories>

@@ -1,0 +1,25 @@
+@using Blashing.Core.Components.Image
+
+@attribute [Stories("Example/Image")]
+
+<Stories TComponent="ImageWidget">
+
+    <ArgType For="_ => _.Src" Control="ControlType.Default" />
+    <ArgType For="_ => _.Width" Control="ControlType.Default" />
+
+    <Story Name="Default">
+
+        <Arguments>
+            <Arg For="_ => _.Src" Value='"https://www.alexhedley.com/images/icon-myapps.png"' />
+            <Arg For="_ => _.Width" Value='"100px"' />
+        </Arguments>
+
+        <Template>
+            <ImageWidget @attributes="context.Args">
+            </ImageWidget>
+            @* <ImageWidget Src="https://www.alexhedley.com/images/icon-myapps.png" Width="100px" /> *@
+        </Template>
+
+    </Story>
+
+</Stories>
