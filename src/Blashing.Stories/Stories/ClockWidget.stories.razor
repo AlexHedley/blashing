@@ -1,0 +1,26 @@
+@using Blashing.Core.Components.Clock
+
+@attribute [Stories("Example/Clock")]
+
+<Stories TComponent="ClockWidget">
+
+    @* <ArgType For="_ => _.Color" Control="ControlType.Color" /> *@
+    <ArgType For="_ => _.Date" Control="ControlType.Default" />
+    <ArgType For="_ => _.Time" Control="ControlType.Default" />
+
+    <Story Name="Default">
+
+        <Arguments>
+            <Arg For="_ => _.Date" Value='"23/06/2023"' />
+            <Arg For="_ => _.Time" Value='"20:53"' />
+        </Arguments>
+
+        <Template>
+            <ClockWidget @attributes="context.Args">
+            </ClockWidget>
+            @* <ClockWidget Date="23/06/2023" Time="20:53" /> *@
+        </Template>
+
+    </Story>
+
+</Stories>
