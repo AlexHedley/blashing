@@ -52,6 +52,7 @@ Add widgets for:
 ## src
 
 - [src](src/)
+  - [Blazing Story](https://github.com/jsakamoto/BlazingStory)
 
 ## Sample
 
