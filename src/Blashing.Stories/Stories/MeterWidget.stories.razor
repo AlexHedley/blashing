@@ -1,0 +1,27 @@
+@using Blashing.Core.Components.Meter
+
+@attribute [Stories("Example/Meter")]
+
+<Stories TComponent="MeterWidget">
+
+    <ArgType For="_ => _.Title" Control="ControlType.Default" />
+    <ArgType For="_ => _.MoreInfo" Control="ControlType.Default" />
+    <ArgType For="_ => _.UpdatedAtMessage" Control="ControlType.Default" />
+
+    <Story Name="Default">
+
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"Meter Title"' />
+            <Arg For="_ => _.MoreInfo" Value='"Meter More Info"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+        </Arguments>
+
+        <Template>
+            <MeterWidget @attributes="context.Args">
+            </MeterWidget>
+            @* <MeterWidget Title="Meter Title" MoreInfo="Meter More Info" UpdatedAtMessage="@DateTime.Now.ToLongDateString()"  *@
+        </Template>
+
+    </Story>
+
+</Stories>
