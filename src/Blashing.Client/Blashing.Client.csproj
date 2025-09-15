@@ -15,7 +15,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.7" PrivateAssets="all" />
-    <PackageReference Include="Excubo.Blazor.Grids" Version="3.1.72" />
+    <PackageReference Include="Excubo.Blazor.Grids" Version="3.1.73" />
   </ItemGroup>
 
   <ItemGroup>
