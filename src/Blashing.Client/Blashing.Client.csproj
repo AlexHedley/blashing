@@ -22,6 +22,7 @@
     <ProjectReference Include="..\Blashing.Core\Blashing.Core.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\Blashing.Shared\Blashing.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

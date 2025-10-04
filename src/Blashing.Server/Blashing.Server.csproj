@@ -10,6 +10,7 @@
     <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
     <ItemGroup>
       <ProjectReference Include="..\Blashing.Core\Blashing.Core.csproj" />
+      <ProjectReference Include="..\Blashing.Shared\Blashing.Shared.csproj" />
     </ItemGroup>
 
 </Project>
