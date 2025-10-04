@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{AE0D0A56-1
 		..\docs\README.md = ..\docs\README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blashing.Shared", "Blashing.Shared\Blashing.Shared.csproj", "{89A9874A-B0E1-446C-9A82-1A6FD842136E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{DF1D8E85-EB47-4A19-89A4-417D49501DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF1D8E85-EB47-4A19-89A4-417D49501DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF1D8E85-EB47-4A19-89A4-417D49501DA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89A9874A-B0E1-446C-9A82-1A6FD842136E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89A9874A-B0E1-446C-9A82-1A6FD842136E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89A9874A-B0E1-446C-9A82-1A6FD842136E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89A9874A-B0E1-446C-9A82-1A6FD842136E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
