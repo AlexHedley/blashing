@@ -1,4 +1,6 @@
-﻿<div class="widget-number">
+﻿@inherits BaseWidget;
+
+<div class="widget-number" style="background-color:@BackgroundColor">
     <h1 class="title">@Title</h1>
     
     <h2 class="value" data-bind="current | shortenedNumber | prepend prefix | append suffix">@Current</h2>
@@ -11,20 +13,3 @@
     
     <p class="updated-at">@UpdatedAtMessage</p>
 </div>
-
-@code {
-    [Parameter]
-    public string? Title { get; set; }
-
-    [Parameter]
-    public string? Current { get; set; }
-    
-    [Parameter]
-    public string? Difference { get; set; }
-
-    [Parameter]
-    public string? MoreInfo { get; set; }
-
-    [Parameter]
-    public string? UpdatedAtMessage { get; set; }
-}
