@@ -1,5 +1,5 @@
 ﻿.widget-meter {
-    background-color: #9c4274;
+    /*background-color: #9c4274;*/
     height: 100%;
     width: 100%;
     text-align: center;
@@ -14,7 +14,7 @@
 }
 
 input.meter {
-    background-color: #9c4274; //darken(#9c4274, 15%);
+    background-color: #9c4274; /*darken(#9c4274, 15%);*/
     color: #fff;
     filter: brightness(0.85);
 }
