@@ -1,0 +1,29 @@
+@using Blashing.Core.Components.List
+
+@attribute [Stories("Example/List")]
+
+<Stories TComponent="ListWidget">
+
+    <ArgType For="_ => _.Title" Control="ControlType.Default" />
+    <ArgType For="_ => _.MoreInfo" Control="ControlType.Default" />
+    <ArgType For="_ => _.UpdatedAtMessage" Control="ControlType.Default" />
+    <ArgType For="_ => _.Items" Control="ControlType.Default" />
+
+    <Story Name="Default">
+
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"List Title"' />
+            <Arg For="_ => _.MoreInfo" Value='"List More Info"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+            <Arg For="_ => _.Items" Value='new() { ("a", "b"), ("c", "d") }' />
+        </Arguments>
+
+        <Template>
+            <ListWidget @attributes="context.Args">
+            </ListWidget>
+            @* <ListWidget Title="List Title" MoreInfo="List More Info" UpdatedAtMessage="@DateTime.Now.ToLongDateString()" Items="@Items" /> *@
+        </Template>
+
+    </Story>
+
+</Stories>

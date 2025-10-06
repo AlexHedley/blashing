@@ -28,10 +28,10 @@ jobs:
     
     steps:
     - name: 🛎️ Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     
     - name: ⚙️ Setup .NET 8.0
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: '8.0.x'
         # include-prerelease: true
@@ -57,7 +57,7 @@ jobs:
     
     # ReportGenerator -reports:"src/**/TestResults/**/coverage.cobertura.xml" -targetdir:coveragereport
     - name: 📊 ReportGenerator
-      uses: danielpalme/ReportGenerator-GitHub-Action@5.4.5
+      uses: danielpalme/ReportGenerator-GitHub-Action@5.4.16
       with:
         reports: 'src/**/TestResults/**/coverage.cobertura.xml' # REQUIRED # The coverage reports that should be parsed (separated by semicolon). Globbing is supported.
         targetdir: 'coveragereport' # REQUIRED # The directory where the generated report should be saved.

@@ -1,0 +1,24 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color: #12b0c5;
+
+$title-color: rgba(255, 255, 255, 0.7);
+$updated-at: rgba(0, 0, 0, 0.3);
+
+// ----------------------------------------------------------------------------
+// Widget Styles
+// ----------------------------------------------------------------------------
+.widget-server-status-square {
+    background-color: $background-color;
+    vertical-align: top;
+
+    .title {
+        color: $title-color;
+        font-size: 25px;
+    }
+
+    .updated-at {
+        color: $updated-at;
+    }
+}

@@ -1,0 +1,48 @@
+@using Excubo.Blazor.Grids
+
+@page "/demo"
+
+<PageTitle>Demo</PageTitle>
+
+<h3>Demo</h3>
+
+@*<div class="container">
+    <div class="row">
+        <div class="col">*@
+
+            <Dashboard RowGap="1em" ColumnGap="1em" AspectRatio="1.5" ColumnCount="4" style="height: 750px; background-color: black;">
+
+                <Element Row="0" Column="0" ColumnSpan="2" style="border: none; box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12)">
+                    @*<div style="height: 100%; width: 100%; background-color: #ec663c"></div>*@
+                    <TextWidget Title="Hello" Text="This is your shiny new dashboard" MoreInfo="Protip: You can drag the widgets around!" UpdatedAtMessage="" />
+                </Element>
+
+                <Element Row="0" Column="2" style="border: none; box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12)">
+                    @*<div style="height: 100%; width: 100%; background-color: #9c4274"></div>*@
+                    <MeterWidget Title="Synergy" MoreInfo="" UpdatedAtMessage="Last updated at 0:00" />
+                </Element>
+
+                <Element Row="0" Column="3" RowSpan="2" style="border: none; box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12)">
+                    @*<div style="height: 100%; width: 100%; background-color: #12b0c5"></div>*@
+                    <ListWidget Title="Buzzwords" MoreInfo="# of times said around the office" UpdatedAtMessage="Last updated at 0:00" Items="@Items" />
+                </Element>
+
+                <Element Row="1" Column="0" style="border: none; box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12)">
+                    @*<div style="height: 100%; width: 100%; background-color: #47bbb3"></div>*@
+                    <NumberWidget Title="Current Valuation" Current="$27" Difference="⬇️ 46%" MoreInfo="in billions" UpdatedAtMessage="Last updated at 0:00" />
+                </Element>
+
+                <Element Row="1" Column="1" ColumnSpan="2" style="border: none; box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12)">
+                    @*<div style="height: 100%; width: 100%; background-color: #dc5945"></div>*@
+                    <GraphWidget Title="Convergence" MoreInfo="" />
+                </Element>
+
+            </Dashboard>
+
+        @*</div>
+    </div>
+</div>*@
+
+@code {
+    List<(string label, string value)>? Items = new() { ("Turn-key", "0"), ("Synergy", "4"), ("Exit strategy", "11"), ("Paridigm shift", "3"), ("Enterprise", "20"), ("Pivoting", "7"), ("Web 2.0", "16"), ("Leverage", "25"), ("Streamlininess", "9") };
+}
