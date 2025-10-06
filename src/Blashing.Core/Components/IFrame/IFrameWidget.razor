@@ -1,8 +1,5 @@
-﻿<div class="widget-iframe">
+﻿@inherits BaseWidget;
+
+<div class="widget-iframe" style="background-color:@BackgroundColor">
     <iframe src="@Url" frameborder=0></iframe>
 </div>
-
-@code {
-    [Parameter]
-    public string? Url { get; set; }
-}
