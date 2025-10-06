@@ -29,24 +29,20 @@ _Inspired by [Dashing](https://github.com/Shopify/dashing) / [Smashing](https://
 
 Add widgets for:
 
-- clock
-- comments
-- graph
-- iframe
-- image
-- list
-- meter
-- number
-- text
+- clock (#2)
+- comments (#3)
+- graph (#4) _WIP_
+- iframe (#5)
+- image (#6)
+- list (#7)
+- meter (#8) _WIP_
+- number (#9)
+- text (#1)
 
 Additional Widgets
 
-- Server Status Squares
-- Circle CI Build Status
-
-Original
-
-![Original Screenshot](docs/images/progress/original_screenshot.png "Original Screenshot")
+- Server Status Squares (#214)
+- ~~Circle CI Build Status~~ (#215)
 
 ## Tests
 
@@ -70,11 +66,32 @@ Dependency Check Report
   - [Stories](src/Blashing.Stories)
     - [Blazing Story](https://github.com/jsakamoto/BlazingStory)
 
+`Core` holds the original Widgets, `Widgets` holds any additional ones ported from the community.
+
+`Stories` is using Blazing Story to show the components.
+
+`Client` / `Server` and `Shared` are examples of how to use these components in a Blazor Application. `Shared` allows you to build a page once, for use in any.
+
+| Project                                      | Type                                | Info  |
+| -------------------------------------------- | ----------------------------------- | ----- |
+| Blashing.Core                                | Microsoft.NET.Sdk.Razor             |       |
+| Blashing.Core.Tests                          | Microsoft.NET.Sdk                   | xunit |
+| Blashing.Widgets                             | Microsoft.NET.Sdk.Razor             |       |
+| Blashing.Widgets.Tests                       | Microsoft.NET.Sdk                   | xunit |
+|                                              |                                     |       |
+| Blashing.Stories                             | Microsoft.NET.Sdk.BlazorWebAssembly |       |
+|                                              |                                     |       |
+| Blashing.Client                              | Microsoft.NET.Sdk.BlazorWebAssembly |       |
+| Blashing.Server                              | Microsoft.NET.Sdk.Web               |       |
+| Blashing.Shared                              | Microsoft.NET.Sdk.Razor             |       |
+
 ## Sample
 
 Ran the example [smashing](https://github.com/Smashing/smashing) locally and took a copy of the served webpage for comparison.
 
 - [sample](index.html)
+
+![Original Screenshot](docs/images/progress/original_screenshot.png "Original Screenshot")
 
 ## Docs
 
