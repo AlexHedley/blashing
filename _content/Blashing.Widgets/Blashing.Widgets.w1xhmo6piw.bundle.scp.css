@@ -1,0 +1,22 @@
+/* _content/Blashing.Widgets/ServerStatusSquares/ServerStatusSquareWidget.razor.rz.scp.css */
+.widget-server-status-square[b-ggz29h6moi] {
+    /*background-color: #12b0c5;*/
+    vertical-align: top;
+
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*text-align: center;*/
+    /*vertical-align: middle;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+}
+
+.widget-server-status-square .title[b-ggz29h6moi] {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
+}
+
+.widget-server-status-square .updated-at[b-ggz29h6moi] {
+    color: rgba(0, 0, 0, 0.3);
+}
