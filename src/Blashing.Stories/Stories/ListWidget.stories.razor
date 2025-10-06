@@ -8,6 +8,7 @@
     <ArgType For="_ => _.MoreInfo" Control="ControlType.Default" />
     <ArgType For="_ => _.UpdatedAtMessage" Control="ControlType.Default" />
     <ArgType For="_ => _.Items" Control="ControlType.Default" />
+    <ArgType For="_ => _.Ordered" Control="ControlType.Default" />
 
     <Story Name="Default">
 
@@ -22,6 +23,23 @@
             <ListWidget @attributes="context.Args">
             </ListWidget>
             @* <ListWidget Title="List Title" MoreInfo="List More Info" UpdatedAtMessage="@DateTime.Now.ToLongDateString()" Items="@Items" /> *@
+        </Template>
+
+    </Story>
+    
+    <Story Name="Ordered">
+
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"List Title"' />
+            <Arg For="_ => _.MoreInfo" Value='"List More Info"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+            <Arg For="_ => _.Items" Value='new() { ("a", "b"), ("c", "d") }' />
+            <Arg For="_ => _.Ordered" Value='true' />
+        </Arguments>
+
+        <Template>
+            <ListWidget @attributes="context.Args">
+            </ListWidget>
         </Template>
 
     </Story>

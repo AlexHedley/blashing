@@ -13,7 +13,10 @@ public partial class ListWidget : BaseWidget
     [Parameter]
     public string? UpdatedAtMessage { get; set; }
 
-    [Parameter] public List<(string label, string value)>? Items { get; set; } = new();
+    [Parameter]
+    public List<(string label, string value)>? Items { get; set; } = new();
+
+    [Parameter] public bool Ordered { get; set; }
     
     protected override void OnParametersSet()
     {
