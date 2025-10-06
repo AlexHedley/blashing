@@ -4,6 +4,8 @@ coverage.json
 **/*.Tests/coverage
 **/coverage.xml
 
+release/
+
 # macOS
 .DS_Store
 

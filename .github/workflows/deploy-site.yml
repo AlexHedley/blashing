@@ -60,6 +60,10 @@ jobs:
     - name: ✚ Add .nojekyll file
       run: touch release/wwwroot/.nojekyll
       
+    # # publishes Blazor Stories project to the 
+    # - name: 🚀 Publish Blazor Stories Project
+    #   run: dotnet publish src/Blashing.Stories/Blashing.Stories.csproj -c Release -o release/wwwroot/reports --nologo
+
     - name: 🚀 Deploy wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.7.3
       with:
