@@ -21,4 +21,8 @@
 	  <ProjectReference Include="..\Blashing.Widgets\Blashing.Widgets.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="wwwroot\images\" />
+	</ItemGroup>
+
 </Project>
