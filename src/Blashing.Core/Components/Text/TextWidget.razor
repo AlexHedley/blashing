@@ -1,4 +1,6 @@
-<div class="widget-text">
+@inherits BaseWidget;
+
+<div class="widget-text" style="background-color:@BackgroundColor">
     <h1 class="title">@Title</h1>
 
     <h3>@Text</h3>
@@ -7,17 +9,3 @@
 
     <p class="updated-at">@UpdatedAtMessage</p>
 </div>
-
-@code {
-    [Parameter]
-    public string? Title { get; set; }
-
-    [Parameter]
-    public string? Text { get; set; }
-
-    [Parameter]
-    public string? MoreInfo { get; set; }
-
-    [Parameter]
-    public string? UpdatedAtMessage { get; set; }
-}
