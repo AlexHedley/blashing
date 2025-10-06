@@ -1,11 +1,5 @@
-﻿<div class="widget-image">
+﻿@inherits BaseWidget;
+
+<div class="widget-image" style="background-color:@BackgroundColor">
     <img data-bind-src="image | prepend '/assets'" src="@Src" width="@Width"/>
 </div>
-
-@code {
-    [Parameter]
-    public string? Src { get; set; }
-    
-    [Parameter]
-    public string? Width { get; set; }
-}
