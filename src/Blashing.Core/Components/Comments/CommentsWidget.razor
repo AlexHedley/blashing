@@ -1,4 +1,6 @@
-﻿<div class="widget-comments">
+﻿@inherits BaseWidget;
+
+<div class="widget-comments" style="background-color:@BackgroundColor">
     <h1 class="title">@Title</h1>
     <div class="comment-container">
         <h3><img data-bind-src='current_comment.avatar'/><span data-bind='current_comment.name' class="name"></span></h3>
@@ -7,14 +9,3 @@
 
     <p class="more-info">@MoreInfo</p>
 </div>
-
-@code {
-    [Parameter]
-    public string? Title { get; set; }
-
-    [Parameter]
-    public string? Quote { get; set; }
-
-    [Parameter]
-    public string? MoreInfo { get; set; }
-}
