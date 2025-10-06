@@ -60,6 +60,10 @@ Original
 
 - [gist](https://gist.github.com/AlexHedley/867fcfe2ac7154c6b610c8189adac06c)
 
+Dependency Check Report
+
+- [dependency-check-report](https://alexhedley.com/blashing/reports/dependency-check-report.html)
+
 ## src
 
 - [src](src/)
