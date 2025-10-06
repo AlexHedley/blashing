@@ -13,12 +13,10 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.9" />
-		<PackageReference Include="Excubo.Blazor.Grids" Version="3.1.74" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Blashing.Core\Blashing.Core.csproj" />
-	  <ProjectReference Include="..\Blashing.Widgets\Blashing.Widgets.csproj" />
 	</ItemGroup>
 
 </Project>

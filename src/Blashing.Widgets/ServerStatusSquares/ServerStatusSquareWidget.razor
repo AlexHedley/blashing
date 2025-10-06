@@ -1,0 +1,13 @@
+<div class="widget-server-status-square">
+    <h1 class="title">@Title</h1>
+
+    <p class="updated-at">@UpdatedAtMessage</p>
+</div>
+
+@code {
+    [Parameter]
+    public string? Title { get; set; }
+    
+    [Parameter]
+    public string? UpdatedAtMessage { get; set; }
+}

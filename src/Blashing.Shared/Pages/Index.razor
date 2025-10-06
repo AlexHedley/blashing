@@ -6,23 +6,41 @@
 
 Welcome to your new app.
 
-<TextWidget Title="a" Text="b" MoreInfo="c" UpdatedAtMessage="d" />
+<TextWidget Title="Text Widget" Text="b" MoreInfo="c" UpdatedAtMessage="d" />
+
+<br />
 
 <ClockWidget Date="23/06/2023" Time="20:53" />
 
-<CommentsWidget Title="Comment 1" Quote="A rose by any other name would smell as sweet." MoreInfo="William Shakespeare" />
+<br />
 
-<GraphWidget Title="e" MoreInfo="f" />
+<CommentsWidget Title="Comments Widget" Quote="A rose by any other name would smell as sweet." MoreInfo="William Shakespeare" />
+
+<br />
+
+<GraphWidget Title="Graph Widget" MoreInfo="f" />
+
+<br />
 
 <IFrameWidget Url="https://www.alexhedley.com/" />
 
+<br />
+
 <ImageWidget Src="https://www.alexhedley.com/images/icon-myapps.png" Width="100px" />
+
+<br />
 
 <ListWidget Title="List Title" MoreInfo="List More Info" UpdatedAtMessage="@DateTime.Now.ToLongDateString()" Items="@Items" />
 
+<br />
+
 <MeterWidget Title="Meter Title" MoreInfo="MeterMore Info" UpdatedAtMessage="@DateTime.Now.ToLongDateString()" />
 
+<br />
+
 <NumberWidget Title="Number Title" Current="Number Current" Difference="Number Difference" MoreInfo="Number More Info" UpdatedAtMessage="Number Updated At Message" />
+
+<br />
 
 @code {
     List<(string label, string value)>? Items = new() { ("a", "b"), ("c", "d") };

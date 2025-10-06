@@ -1,0 +1,26 @@
+@using Blashing.Core.Components.Text
+@using Blashing.Widgets.ServerStatusSquares
+
+@attribute [Stories("Example/Text")]
+
+<Stories TComponent="ServerStatusSquareWidget">
+
+    <ArgType For="_ => _.Title" Control="ControlType.Default" />
+    <ArgType For="_ => _.UpdatedAtMessage" Control="ControlType.Default" />
+
+    <Story Name="Default">
+
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"Server Up"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+        </Arguments>
+
+        <Template>
+            <ServerStatusSquareWidget @attributes="context.Args">
+            </ServerStatusSquareWidget>
+            @* <ServerStatusSquareWidget Title="a" UpdatedAtMessage="b" /> *@
+        </Template>
+
+    </Story>
+
+</Stories>

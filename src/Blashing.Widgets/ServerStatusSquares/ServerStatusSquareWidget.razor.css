@@ -1,0 +1,21 @@
+.widget-server-status-square {
+    background-color: #12b0c5;
+    vertical-align: top;
+
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*text-align: center;*/
+    /*vertical-align: middle;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+}
+
+.widget-server-status-square .title {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
+}
+
+.widget-server-status-square .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+}
