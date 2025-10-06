@@ -1,0 +1,56 @@
+@using Blashing.Core.Components.Text
+@using Blashing.Widgets.ServerStatusSquares
+
+@attribute [Stories("Example/Server Status Square")]
+
+<Stories TComponent="ServerStatusSquareWidget">
+
+    <ArgType For="_ => _.Title" Control="ControlType.Default" />
+    <ArgType For="_ => _.UpdatedAtMessage" Control="ControlType.Default" />
+
+    <Story Name="Default">
+
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"Server Up"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+        </Arguments>
+
+        <Template>
+            <ServerStatusSquareWidget @attributes="context.Args">
+            </ServerStatusSquareWidget>
+            @* <ServerStatusSquareWidget Title="a" UpdatedAtMessage="b" /> *@
+        </Template>
+
+    </Story>
+    
+    <Story Name="Up">
+
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"Server Up"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+            <Arg For="_ => _.BackgroundColor" Value='"green"' />
+        </Arguments>
+
+        <Template>
+            <ServerStatusSquareWidget @attributes="context.Args">
+            </ServerStatusSquareWidget>
+        </Template>
+
+    </Story>
+    
+    <Story Name="Down">
+
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"Server Down"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+            <Arg For="_ => _.BackgroundColor" Value='"red"' />
+        </Arguments>
+
+        <Template>
+            <ServerStatusSquareWidget @attributes="context.Args">
+            </ServerStatusSquareWidget>
+        </Template>
+
+    </Story>
+
+</Stories>

@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Blashing.Core\Blashing.Core.csproj" />
+    <ProjectReference Include="..\Blashing.Widgets\Blashing.Widgets.csproj" />
   </ItemGroup>
 
 
