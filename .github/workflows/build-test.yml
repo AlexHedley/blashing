@@ -21,40 +21,40 @@ jobs:
   build-test:
     # use ubuntu-latest image to run steps on
     runs-on: ubuntu-latest
-    
+
 #     defaults:
 #       run:
 #         working-directory: src
-    
+
     steps:
     - name: 🛎️ Checkout
       uses: actions/checkout@v5
-    
+
     - name: ⚙️ Setup .NET 8.0
       uses: actions/setup-dotnet@v5
       with:
         dotnet-version: '8.0.x'
         # include-prerelease: true
-    
+
     - name: ⬇️ Restore dependencies
       run: dotnet restore
       working-directory: src
-      
+
     - name: 🔨 Build
       run: dotnet build --no-restore
       working-directory: src
-    
+
     - name: 🧪 Unit Testing
       # run: dotnet test Blashing.Core.Tests.csproj --collect:"XPlat Code Coverage"
       run: dotnet test --collect:"XPlat Code Coverage"
       working-directory: src
-      
+
     - name: 🚀 Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action@v2
       if: always()
       with:
         xunit_files: 'src/**/TestResults/**/coverage.cobertura.xml'
-    
+
     # ReportGenerator -reports:"src/**/TestResults/**/coverage.cobertura.xml" -targetdir:coveragereport
     - name: 📊 ReportGenerator
       uses: danielpalme/ReportGenerator-GitHub-Action@5.4.16
@@ -74,13 +74,13 @@ jobs:
         # license: '' # Optional license for PRO version. Get your license here: https://reportgenerator.io/pro
         # customSettings: '' # Optional custom settings (separated by semicolon). See: https://github.com/danielpalme/ReportGenerator/wiki/Settings.
         toolpath: 'reportgeneratortool' # Default directory for installing the dotnet tool.
-    
+
     - name: ⬆️ 📊 Upload coverage report artifact
       uses: actions/upload-artifact@v4.6.2
       with:
         name: CoverageReport # Artifact name        
         path: coveragereport # Directory containing files to upload
-    
+
     # https://github.com/zyborg/dotnet-tests-report
     # https://github.com/marketplace/actions/dotnet-tests-report
     - name: 🧪 Unit Tests - Blashing Core
@@ -92,4 +92,17 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         gist_name: blashing_core_tests.md
         gist_badge_label: 'Blashing Core: %Counters_passed%/%Counters_total%'
+        gist_token: ${{ secrets.GIST_TOKEN }}
+
+    # https://github.com/zyborg/dotnet-tests-report
+    # https://github.com/marketplace/actions/dotnet-tests-report
+    - name: 🧪 Unit Tests - Blashing Widgets
+      uses: zyborg/dotnet-tests-report@v1
+      with:
+        project_path: src/Blashing.Widgets.Tests
+        report_name: Blashing Widgets Tests
+        report_title: Blashing Widgets Tests
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        gist_name: blashing_widgets_tests.md
+        gist_badge_label: 'Blashing Widgets: %Counters_passed%/%Counters_total%'
         gist_token: ${{ secrets.GIST_TOKEN }}
