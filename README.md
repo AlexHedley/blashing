@@ -42,7 +42,7 @@ Add widgets for:
 Additional Widgets
 
 - Server Status Squares (#214)
-- ~~Circle CI Build Status~~ (#215)
+- Circle CI Build Status (#215)
 
 ## Tests
 
