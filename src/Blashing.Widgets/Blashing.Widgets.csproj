@@ -19,4 +19,8 @@
 	  <ProjectReference Include="..\Blashing.Core\Blashing.Core.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Include="wwwroot\images\logo-circle-ci.png" />
+	</ItemGroup>
+
 </Project>

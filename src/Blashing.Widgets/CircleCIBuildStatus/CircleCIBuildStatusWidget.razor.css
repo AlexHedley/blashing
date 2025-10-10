@@ -1,0 +1,80 @@
+.widget-circle-ci {
+    /*background-color: #8fb347;*/
+    vertical-align: top;
+}
+.widget-circle-ci img.background {
+    width: 100% !important;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    opacity: 0.05;
+}
+.widget-circle-ci .committer-info {
+    margin: 10px 0px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.3);
+}
+.widget-circle-ci .committer-info img {
+    /*float: left;*/
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+.widget-circle-ci .committer-info .label {
+    text-align: left;
+    padding-left: 90px;
+    font-size: 20px;
+}
+.widget-circle-ci .committer-info .label.small {
+    font-size: 14px;
+}
+.widget-circle-ci .title {
+    color: rgba(255, 255, 255, 1);
+}
+.widget-circle-ci ol, .widget-circle-ci ul {
+    margin: 0 15px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7);
+}
+.widget-circle-ci ol {
+    list-style-position: inside;
+}
+.widget-circle-ci li {
+    margin-bottom: 5px;
+}
+.widget-circle-ci .list-nostyle {
+    list-style: none;
+}
+.widget-circle-ci .label {
+    text-align: center;
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 24px;
+    word-wrap: break-word;
+}
+.widget-circle-ci .label.small {
+    font-size: 18px;
+}
+.widget-circle-ci .state {
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    color: #fff;
+    font-size: 40px;
+    word-wrap: break-word;
+}
+.widget-circle-ci .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+}
+.widget-circle-ci .more-info {
+    color: rgba(255, 255, 255, 0.7);
+}
+.widget-circle-ci.failed {
+    background-color: #a31f1f;
+}
+.widget-circle-ci.pending {
+    background-color: #47bbb3;
+}
+.widget-circle-ci.passed {
+    background-color: #8fb347;
+}

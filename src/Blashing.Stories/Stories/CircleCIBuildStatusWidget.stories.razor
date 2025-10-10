@@ -1,0 +1,94 @@
+@using Blashing.Widgets.CircleCIBuildStatus
+
+@attribute [Stories("Example/Circle CI Build Status")]
+
+<Stories TComponent="CircleCIBuildStatusWidget">
+
+    <ArgType For="_ => _.Title" Control="ControlType.Default" />
+    <ArgType For="_ => _.UpdatedAtMessage" Control="ControlType.Default" />
+
+    <Story Name="Default">
+
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"Circle CI"' />
+            <Arg For="_ => _.BuildId" Value='"dev, build #1"' />
+            <Arg For="_ => _.AvatarUrl" Value='"https://gravatar.com/avatar/3184635da54b04bd362f09bad9aced67?s=200&d=mp"' />
+            <Arg For="_ => _.CommitterName" Value='"mp"' />
+            <Arg For="_ => _.CommitBody" Value='"fix mc"' />
+            <Arg For="_ => _.State" Value='"SUCCESS"' />
+            <Arg For="_ => _.Time" Value='"1h 36m ago"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+        </Arguments>
+
+        <Template>
+            <CircleCIBuildStatusWidget @attributes="context.Args">
+            </CircleCIBuildStatusWidget>
+            @* <CircleCIBuildStatusWidget Title="a" UpdatedAtMessage="b" /> *@
+        </Template>
+
+    </Story>
+    
+    <Story Name="Failed">
+    
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"Payment Service"' />
+            <Arg For="_ => _.BuildId" Value='"main, build #1"' />
+            <Arg For="_ => _.AvatarUrl" Value='"https://gravatar.com/avatar/3184635da54b04bd362f09bad9aced67?s=200&d=robohash"' />
+            <Arg For="_ => _.CommitterName" Value='"robohash"' />
+            <Arg For="_ => _.CommitBody" Value='"Added Bad Code"' />
+            <Arg For="_ => _.State" Value='"FAILED"' />
+            <Arg For="_ => _.Time" Value='"2h 4m ago"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+            <Arg For="_ => _.BackgroundColor" Value='"#a31f1f"' />
+        </Arguments>
+        
+        <Template>
+            <CircleCIBuildStatusWidget @attributes="context.Args">
+            </CircleCIBuildStatusWidget>
+        </Template>
+    
+    </Story>
+    
+    <Story Name="Pending">
+    
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"Dashboard"' />
+            <Arg For="_ => _.BuildId" Value='"main, build #2"' />
+            <Arg For="_ => _.AvatarUrl" Value='"https://gravatar.com/avatar/3184635da54b04bd362f09bad9aced67?s=200&d=retro"' />
+            <Arg For="_ => _.CommitterName" Value='"retro"' />
+            <Arg For="_ => _.CommitBody" Value='"Wrote Code"' />
+            <Arg For="_ => _.State" Value='"PENDING"' />
+            <Arg For="_ => _.Time" Value='"22h 22m ago"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+            <Arg For="_ => _.BackgroundColor" Value='"#47bbb3"' />
+        </Arguments>
+    
+        <Template>
+            <CircleCIBuildStatusWidget @attributes="context.Args">
+            </CircleCIBuildStatusWidget>
+        </Template>
+    
+    </Story>
+    
+    <Story Name="Passed">
+    
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"GoCardless"' />
+            <Arg For="_ => _.BuildId" Value='"dev, build #1"' />
+            <Arg For="_ => _.AvatarUrl" Value='"https://gravatar.com/avatar/3184635da54b04bd362f09bad9aced67?s=200&d=wavatar"' />
+            <Arg For="_ => _.CommitterName" Value='"wavatar"' />
+            <Arg For="_ => _.CommitBody" Value='"Wrote Good Code"' />
+            <Arg For="_ => _.State" Value='"SUCCESS"' />
+            <Arg For="_ => _.Time" Value='"1h 36m ago"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+            <Arg For="_ => _.BackgroundColor" Value='"#8fb347"' />
+        </Arguments>
+    
+        <Template>
+            <CircleCIBuildStatusWidget @attributes="context.Args">
+            </CircleCIBuildStatusWidget>
+        </Template>
+    
+    </Story>
+
+</Stories>

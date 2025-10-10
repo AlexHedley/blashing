@@ -15,6 +15,25 @@
 
         </div>
     </div>
+    
+    <div class="row">
+        <div class="col">
+
+            <h2>Circle CI Build Status</h2>
+            <CircleCIBuildStatusWidget
+                Title="Circle CI Build Status"
+                BuildId="dev, build #1"
+                AvatarUrl="https://gravatar.com/avatar/3184635da54b04bd362f09bad9aced67?s=200&d=mp"
+                CommitterName="wavatar"
+                CommitBody="Wrote Good Code"
+                State="SUCCESS"
+                Time="1h 36m ago"
+                UpdatedAtMessage="Last updated at 0:00"
+                BackgroundColor="#8fb347">
+            </CircleCIBuildStatusWidget>
+            
+        </div>
+    </div>
 </div>
         
 <hr />
@@ -26,11 +45,25 @@
     </Element>
     
     <Element Row="0" Column="1">
-        <ServerStatusSquareWidget Title="Success" UpdatedAtMessage="Last updated at 0:00" BackgroundColor="green"></ServerStatusSquareWidget>
+        <ServerStatusSquareWidget Title="Success" UpdatedAtMessage="Last updated at 0:00" BackgroundColor="#96BF48"></ServerStatusSquareWidget>
     </Element>
     
     <Element Row="0" Column="2">
-        <ServerStatusSquareWidget Title="Failed" UpdatedAtMessage="Last updated at 0:00" BackgroundColor="red"></ServerStatusSquareWidget>
+        <ServerStatusSquareWidget Title="Failed" UpdatedAtMessage="Last updated at 0:00" BackgroundColor="#BF4848"></ServerStatusSquareWidget>
+    </Element>
+    
+    <Element Row="1" Column="0">
+        <CircleCIBuildStatusWidget
+            Title="GoCardless"
+            BuildId="dev, build #1"
+            AvatarUrl="https://gravatar.com/avatar/3184635da54b04bd362f09bad9aced67?s=200&d=wavatar"
+            CommitterName="wavatar"
+            CommitBody="Wrote Good Code"
+            State="SUCCESS"
+            Time="1h 36m ago"
+            UpdatedAtMessage="Last updated at 0:00"
+            BackgroundColor="#8fb347">
+        </CircleCIBuildStatusWidget>
     </Element>
     
 </Dashboard>

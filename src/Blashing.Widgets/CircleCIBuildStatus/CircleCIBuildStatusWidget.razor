@@ -1,0 +1,21 @@
+@inherits Blashing.Core.Components.BaseWidget;
+
+<div class="widget-circle-ci" style="background-color:@BackgroundColor">
+    <h1 class="title">@Title</h1>
+
+    <img class="background" src="_content/Blashing.Widgets/images/logo-circle-ci.png">
+
+    <span class="label small">@BuildId</span>
+    <div class="commit-info">
+        <img src="@AvatarUrl" />
+        <span class="label committer-name">@CommitterName</span>
+        <span class="label small commit-body">@CommitBody</span>
+        <div class="clearfix"></div>
+    </div>
+
+    <h2 class="state">@State</h2>
+    <span class="label small">@Time</span>
+
+    <p class="more-info">@MoreInfo</p>
+    <p class="updated-at">@UpdatedAtMessage</p>
+</div>
