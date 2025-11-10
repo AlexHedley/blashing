@@ -65,7 +65,7 @@ jobs:
     #   run: dotnet publish src/Blashing.Stories/Blashing.Stories.csproj -c Release -o release/wwwroot/reports --nologo
 
     - name: 🚀 Deploy wwwroot to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4.7.3
+      uses: JamesIves/github-pages-deploy-action@v4.7.4
       with:
         branch: gh-pages
         folder: release/wwwroot
