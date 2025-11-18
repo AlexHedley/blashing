@@ -4,7 +4,7 @@ using Blashing.Core.Components.Comments;
 
 namespace Blashing.Core.Tests;
 
-public class CommentsWidgetTest : TestContext
+public class CommentsWidgetTest : BunitContext
 {
     [Fact]
     public void CommentsWidgetMarkupShouldContainPassedInValues()
@@ -13,7 +13,7 @@ public class CommentsWidgetTest : TestContext
         var quote = "A rose by any other name would smell as sweet.";
         var moreInfo = "William Shakespeare";
 
-        var cut = RenderComponent<CommentsWidget>(parameters => parameters
+        var cut = Render<CommentsWidget>(parameters => parameters
                 .Add(p => p.Title, title)
                 .Add(p => p.Quote, quote)
                 .Add(p => p.MoreInfo, moreInfo)
@@ -46,7 +46,7 @@ public class CommentsWidgetTest : TestContext
         var quote = "A rose by any other name would smell as sweet.";
         var moreInfo = "William Shakespeare";
 
-        var cut = RenderComponent<CommentsWidget>(parameters => parameters
+        var cut = Render<CommentsWidget>(parameters => parameters
                 .Add(p => p.Title, title)
                 .Add(p => p.Quote, quote)
                 .Add(p => p.MoreInfo, moreInfo)

@@ -4,7 +4,7 @@ using Blashing.Core.Components.Text;
 
 namespace Blashing.Core.Tests;
 
-public class TextWidgetTest : TestContext
+public class TextWidgetTest : BunitContext
 {
     [Fact]
     public void TextWidgetMarkupShouldContainPassedInValues()
@@ -14,7 +14,7 @@ public class TextWidgetTest : TestContext
         var moreInfo = "c";
         var updatedAtMessage = "d";
 
-        var cut = RenderComponent<TextWidget>(parameters => parameters
+        var cut = Render<TextWidget>(parameters => parameters
                 .Add(p => p.Title, title)
                 .Add(p => p.Text, text)
                 .Add(p => p.MoreInfo, moreInfo)
@@ -50,7 +50,7 @@ public class TextWidgetTest : TestContext
         var moreInfo = "c";
         var updatedAtMessage = "d";
 
-        var cut = RenderComponent<TextWidget>(parameters => parameters
+        var cut = Render<TextWidget>(parameters => parameters
                 .Add(p => p.Title, title)
                 .Add(p => p.Text, text)
                 .Add(p => p.MoreInfo, moreInfo)

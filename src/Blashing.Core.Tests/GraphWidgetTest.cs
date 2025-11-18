@@ -4,7 +4,7 @@ using Blashing.Core.Components.Graph;
 
 namespace Blashing.Core.Tests;
 
-public class GraphWidgetTest : TestContext
+public class GraphWidgetTest : BunitContext
 {
     [Fact]
     public void CommentsWidgetMarkupShouldContainPassedInValues()
@@ -12,7 +12,7 @@ public class GraphWidgetTest : TestContext
         var title = "Graph 1";
         var moreInfo = "This graph contains lots of useful data";
 
-        var cut = RenderComponent<GraphWidget>(parameters => parameters
+        var cut = Render<GraphWidget>(parameters => parameters
                 .Add(p => p.Title, title)
                 .Add(p => p.MoreInfo, moreInfo)
             );
@@ -35,7 +35,7 @@ public class GraphWidgetTest : TestContext
         var title = "Graph 1";
         var moreInfo = "This graph contains lots of useful data";
         
-        var cut = RenderComponent<GraphWidget>(parameters => parameters
+        var cut = Render<GraphWidget>(parameters => parameters
                 .Add(p => p.Title, title)
                 .Add(p => p.MoreInfo, moreInfo)
             );

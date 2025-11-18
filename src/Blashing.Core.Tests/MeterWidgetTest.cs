@@ -4,7 +4,7 @@ using Blashing.Core.Components.Meter;
 
 namespace Blashing.Core.Tests;
 
-public class MeterWidgetTest : TestContext
+public class MeterWidgetTest : BunitContext
 {
     [Fact]
     public void MeterWidgetMarkupShouldContainPassedInValues()
@@ -21,7 +21,7 @@ public class MeterWidgetTest : TestContext
         var min = 0;
         var max = 100;
 
-        var cut = RenderComponent<MeterWidget>(parameters => parameters
+        var cut = Render<MeterWidget>(parameters => parameters
                 .Add(p => p.Title, title)
                 .Add(p => p.MoreInfo, moreInfo)
                 .Add(p => p.UpdatedAtMessage, updatedAtMessage)
@@ -71,7 +71,7 @@ public class MeterWidgetTest : TestContext
         var min = 0;
         var max = 100;
 
-        var cut = RenderComponent<MeterWidget>(parameters => parameters
+        var cut = Render<MeterWidget>(parameters => parameters
             .Add(p => p.Title, title)
             .Add(p => p.MoreInfo, moreInfo)
             .Add(p => p.UpdatedAtMessage, updatedAtMessage)

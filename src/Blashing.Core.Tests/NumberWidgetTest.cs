@@ -4,7 +4,7 @@ using Blashing.Core.Components.Number;
 
 namespace Blashing.Core.Tests;
 
-public class NumberWidgetTest : TestContext
+public class NumberWidgetTest : BunitContext
 {
     [Fact]
     public void NumberWidgetMarkupShouldContainPassedInValues()
@@ -15,7 +15,7 @@ public class NumberWidgetTest : TestContext
         var moreInfo = "More Info";
         var updatedAtMessage = "Updated At Message";
 
-        var cut = RenderComponent<NumberWidget>(parameters => parameters
+        var cut = Render<NumberWidget>(parameters => parameters
                 .Add(p => p.Title, title)
                 .Add(p => p.Current, current)
                 .Add(p => p.Difference, difference)
@@ -59,7 +59,7 @@ public class NumberWidgetTest : TestContext
         var moreInfo = "More Info";
         var updatedAtMessage = "Updated At Message";
 
-        var cut = RenderComponent<NumberWidget>(parameters => parameters
+        var cut = Render<NumberWidget>(parameters => parameters
             .Add(p => p.Title, title)
             .Add(p => p.Current, current)
             .Add(p => p.Difference, difference)

@@ -5,7 +5,7 @@ using Blashing.Core.Components.Clock;
 
 namespace Blashing.Core.Tests;
 
-public class ClockWidgetTest : TestContext
+public class ClockWidgetTest : BunitContext
 {
     [Fact]
     public void ClockWidgetMarkupShouldContainPassedInValues()
@@ -13,7 +13,7 @@ public class ClockWidgetTest : TestContext
         var date = "23/06/2023";
         var time = "20:53";
 
-        var cut = RenderComponent<ClockWidget>(parameters => parameters
+        var cut = Render<ClockWidget>(parameters => parameters
                 .Add(p => p.Date, date)
                 .Add(p => p.Time, time)
             );
@@ -37,7 +37,7 @@ public class ClockWidgetTest : TestContext
         var date = "23/06/2023";
         var time = "20:53";
 
-        var cut = RenderComponent<ClockWidget>(parameters => parameters
+        var cut = Render<ClockWidget>(parameters => parameters
                 .Add(p => p.Date, date)
                 .Add(p => p.Time, time)
             );
