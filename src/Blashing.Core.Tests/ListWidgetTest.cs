@@ -4,7 +4,7 @@ using Blashing.Core.Components.List;
 
 namespace Blashing.Core.Tests;
 
-public class ListWidgetTest : TestContext
+public class ListWidgetTest : BunitContext
 {
     [Fact]
     public void TextWidgetMarkupShouldContainPassedInValues()
@@ -14,7 +14,7 @@ public class ListWidgetTest : TestContext
         var updatedAtMessage = "d";
         var items = new List<(string label, string value)>() { ("a", "b"), ("c", "d") };
 
-        var cut = RenderComponent<ListWidget>(parameters => parameters
+        var cut = Render<ListWidget>(parameters => parameters
                 .Add(p => p.Title, title)
                 .Add(p => p.MoreInfo, moreInfo)
                 .Add(p => p.UpdatedAtMessage, updatedAtMessage)
@@ -66,7 +66,7 @@ public class ListWidgetTest : TestContext
         var updatedAtMessage = "d";
         var items = new List<(string label, string value)>() { ("a", "b"), ("c", "d") };
 
-        var cut = RenderComponent<ListWidget>(parameters => parameters
+        var cut = Render<ListWidget>(parameters => parameters
             .Add(p => p.Title, title)
             .Add(p => p.MoreInfo, moreInfo)
             .Add(p => p.UpdatedAtMessage, updatedAtMessage)

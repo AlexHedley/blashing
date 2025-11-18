@@ -4,14 +4,14 @@ using Blashing.Core.Components.IFrame;
 
 namespace Blashing.Core.Tests;
 
-public class IFrameWidgetTest : TestContext
+public class IFrameWidgetTest : BunitContext
 {
     [Fact]
     public void IFramekWidgetMarkupShouldContainPassedInValues()
     {
         var url = "https://www.alexhedley.com/";
 
-        var cut = RenderComponent<IFrameWidget>(parameters => parameters
+        var cut = Render<IFrameWidget>(parameters => parameters
                 .Add(p => p.Url, url)
             );
 
@@ -29,7 +29,7 @@ public class IFrameWidgetTest : TestContext
     {
         var url = "https://www.alexhedley.com/";
 
-        var cut = RenderComponent<IFrameWidget>(parameters => parameters
+        var cut = Render<IFrameWidget>(parameters => parameters
                 .Add(p => p.Url, url)
             );
 

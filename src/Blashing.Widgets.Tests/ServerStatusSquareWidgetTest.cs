@@ -5,7 +5,7 @@ using Blashing.Widgets.ServerStatusSquares;
 
 namespace Blashing.Widgets.Tests;
 
-public class ServerStatusSquareWidgetTest : TestContext
+public class ServerStatusSquareWidgetTest : BunitContext
 {
     [Fact]
     public void ServerStatusSquareWidgetMarkupShouldContainPassedInValues()
@@ -13,7 +13,7 @@ public class ServerStatusSquareWidgetTest : TestContext
         var title = "Server Status Square Title";
         var updatedAtMessage = "Updated At Message";
 
-        var cut = RenderComponent<ServerStatusSquareWidget>(parameters => parameters
+        var cut = Render<ServerStatusSquareWidget>(parameters => parameters
             .Add(p => p.Title, title)
             .Add(p => p.UpdatedAtMessage, updatedAtMessage)
         );
@@ -37,7 +37,7 @@ public class ServerStatusSquareWidgetTest : TestContext
         var title = "Server Status Square Title";
         var updatedAtMessage = "Updated At Message";
 
-        var cut = RenderComponent<ServerStatusSquareWidget>(parameters => parameters
+        var cut = Render<ServerStatusSquareWidget>(parameters => parameters
             .Add(p => p.Title, title)
             .Add(p => p.UpdatedAtMessage, updatedAtMessage)
         );

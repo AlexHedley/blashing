@@ -4,7 +4,7 @@ using Blashing.Core.Components.Image;
 
 namespace Blashing.Core.Tests;
 
-public class ImageWidgetTest : TestContext
+public class ImageWidgetTest : BunitContext
 {
     [Fact]
     public void ImageWidgetMarkupShouldContainPassedInValues()
@@ -12,7 +12,7 @@ public class ImageWidgetTest : TestContext
         var src = "https://www.alexhedley.com/images/icon-myapps.png";
         var width = "100px";
 
-        var cut = RenderComponent<ImageWidget>(parameters => parameters
+        var cut = Render<ImageWidget>(parameters => parameters
             .Add(p => p.Src, src)
             .Add(p => p.Width, width)
         );
@@ -32,7 +32,7 @@ public class ImageWidgetTest : TestContext
         var src = "https://www.alexhedley.com/images/icon-myapps.png";
         var width = "100px";
 
-        var cut = RenderComponent<ImageWidget>(parameters => parameters
+        var cut = Render<ImageWidget>(parameters => parameters
             .Add(p => p.Src, src)
             .Add(p => p.Width, width)
         );

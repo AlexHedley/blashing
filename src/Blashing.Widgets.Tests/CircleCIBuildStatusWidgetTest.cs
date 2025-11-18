@@ -5,7 +5,7 @@ using Blashing.Widgets.CircleCIBuildStatus;
 
 namespace Blashing.Widgets.Tests;
 
-public class CircleCIBuildStatusWidgetTest : TestContext
+public class CircleCIBuildStatusWidgetTest : BunitContext
 {
     [Fact]
     public void CircleCIBuildStatusWidgetMarkupShouldContainPassedInValues()
@@ -20,7 +20,7 @@ public class CircleCIBuildStatusWidgetTest : TestContext
         var state = "State";
         var time = "Time";
 
-        var cut = RenderComponent<CircleCIBuildStatusWidget>(parameters => parameters
+        var cut = Render<CircleCIBuildStatusWidget>(parameters => parameters
             .Add(p => p.Title, title)
             .Add(p => p.MoreInfo, moreInfo)
             .Add(p => p.UpdatedAtMessage, updatedAtMessage)
@@ -94,7 +94,7 @@ public class CircleCIBuildStatusWidgetTest : TestContext
         var state = "State";
         var time = "Time";
 
-        var cut = RenderComponent<CircleCIBuildStatusWidget>(parameters => parameters
+        var cut = Render<CircleCIBuildStatusWidget>(parameters => parameters
             .Add(p => p.Title, title)
             .Add(p => p.MoreInfo, moreInfo)
             .Add(p => p.UpdatedAtMessage, updatedAtMessage)
