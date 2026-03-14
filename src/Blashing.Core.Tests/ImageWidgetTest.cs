@@ -27,7 +27,7 @@ public class ImageWidgetTest : BunitContext
     }
 
     [Fact]
-    public void ClockWidgetShouldContainPassedInValues()
+    public void ImageWidgetShouldContainPassedInValues()
     {
         var src = "https://www.alexhedley.com/images/icon-myapps.png";
         var width = "100px";
