@@ -1,0 +1,62 @@
+.widget-timeline {
+    background-color: #4b4b4b;
+    padding-bottom: 70px;
+    overflow-y: auto;
+}
+
+.widget-timeline .title {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.widget-timeline .more-info {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.widget-timeline .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.widget-timeline .timeline-list {
+    list-style: none;
+    padding: 10px 20px 10px 40px;
+    margin: 0;
+    position: relative;
+}
+
+.widget-timeline .timeline-list::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #E8F770;
+}
+
+.widget-timeline .timeline-event {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.widget-timeline .timeline-event .timeline-dot {
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #E8F770;
+}
+
+.widget-timeline .timeline-event .timeline-content .event-description-date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    display: block;
+}
+
+.widget-timeline .timeline-event .timeline-content .event-description {
+    color: white;
+    font-size: 14px;
+    display: block;
+}
