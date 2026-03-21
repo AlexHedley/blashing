@@ -19,6 +19,25 @@
     <div class="row">
         <div class="col">
 
+            <h2>Timeline</h2>
+            <TimelineWidget
+                Title="Timeline"
+                Items="@(new List<TimelineItem> {
+                    new("09:00", "Stand-up"),
+                    new("10:30", "Code Review"),
+                    new("14:00", "Deploy"),
+                    new("16:30", "Retrospective")
+                })"
+                MoreInfo="Today"
+                UpdatedAtMessage="Last updated at 0:00">
+            </TimelineWidget>
+
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+
             <h2>Circle CI Build Status</h2>
             <CircleCIBuildStatusWidget
                 Title="Circle CI Build Status"
@@ -64,6 +83,19 @@
             UpdatedAtMessage="Last updated at 0:00"
             BackgroundColor="#8fb347">
         </CircleCIBuildStatusWidget>
+    </Element>
+    <Element Row="1" Column="1">
+        <TimelineWidget
+            Title="Timeline"
+            Items="@(new List<TimelineItem> {
+                new("09:00", "Stand-up"),
+                new("10:30", "Code Review"),
+                new("14:00", "Deploy"),
+                new("16:30", "Retrospective")
+            })"
+            MoreInfo="Today"
+            UpdatedAtMessage="Last updated at 0:00">
+        </TimelineWidget>
     </Element>
     
 </Dashboard>
