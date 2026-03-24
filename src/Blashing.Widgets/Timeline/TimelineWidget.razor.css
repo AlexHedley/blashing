@@ -60,6 +60,7 @@
     border-radius: 50%;
     background: #E8F770;
     z-index: 1;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
 }
 
 /* right column: title */

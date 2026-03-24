@@ -8,7 +8,7 @@
         {
             <li class="timeline-event">
                 <span class="event-description-date">@item.Date</span>
-                <div class="timeline-dot"></div>
+                <div class="timeline-dot" style="@(!string.IsNullOrEmpty(item.Color) ? $"background-color:{item.Color};" : "")"></div>
                 <span class="event-description">@item.Title</span>
             </li>
         }
