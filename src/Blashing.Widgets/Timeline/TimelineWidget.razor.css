@@ -18,45 +18,57 @@
 
 .widget-timeline .timeline-list {
     list-style: none;
-    padding: 10px 20px 10px 40px;
+    padding: 10px 20px;
     margin: 0;
     position: relative;
 }
 
+/* vertical line through the centre of the dots */
 .widget-timeline .timeline-list::before {
     content: '';
     position: absolute;
-    left: 28px;
+    left: 50%;
     top: 0;
     bottom: 0;
     width: 2px;
+    transform: translateX(-50%);
     background: #E8F770;
 }
 
 .widget-timeline .timeline-event {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
     position: relative;
-    padding-left: 20px;
-    margin-bottom: 15px;
 }
 
+/* left column: date */
+.widget-timeline .timeline-event .event-description-date {
+    flex: 1;
+    text-align: right;
+    padding-right: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* centre: dot */
 .widget-timeline .timeline-event .timeline-dot {
-    position: absolute;
-    left: -8px;
-    top: 5px;
+    flex-shrink: 0;
     width: 14px;
     height: 14px;
     border-radius: 50%;
     background: #E8F770;
+    z-index: 1;
 }
 
-.widget-timeline .timeline-event .timeline-content .event-description-date {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 12px;
-    display: block;
-}
-
-.widget-timeline .timeline-event .timeline-content .event-description {
+/* right column: title */
+.widget-timeline .timeline-event .event-description {
+    flex: 1;
+    padding-left: 14px;
     color: white;
     font-size: 14px;
-    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

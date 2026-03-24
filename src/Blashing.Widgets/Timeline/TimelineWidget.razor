@@ -7,11 +7,9 @@
         @foreach (var item in Items ?? Enumerable.Empty<TimelineItem>())
         {
             <li class="timeline-event">
+                <span class="event-description-date">@item.Date</span>
                 <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="event-description-date">@item.Date</span>
-                    <span class="event-description">@item.Title</span>
-                </div>
+                <span class="event-description">@item.Title</span>
             </li>
         }
     </ul>
