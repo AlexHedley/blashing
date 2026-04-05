@@ -1,0 +1,103 @@
+/* _content/Blashing.Widgets/CircleCIBuildStatus/CircleCIBuildStatusWidget.razor.rz.scp.css */
+.widget-circle-ci[b-2m4gfc6165] {
+    /*background-color: #8fb347;*/
+    vertical-align: top;
+}
+.widget-circle-ci img.background[b-2m4gfc6165] {
+    width: 100% !important;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    opacity: 0.05;
+}
+.widget-circle-ci .committer-info[b-2m4gfc6165] {
+    margin: 10px 0px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.3);
+}
+.widget-circle-ci .committer-info img[b-2m4gfc6165] {
+    /*float: left;*/
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+.widget-circle-ci .committer-info .label[b-2m4gfc6165] {
+    text-align: left;
+    padding-left: 90px;
+    font-size: 20px;
+}
+.widget-circle-ci .committer-info .label.small[b-2m4gfc6165] {
+    font-size: 14px;
+}
+.widget-circle-ci .title[b-2m4gfc6165] {
+    color: rgba(255, 255, 255, 1);
+}
+.widget-circle-ci ol[b-2m4gfc6165], .widget-circle-ci ul[b-2m4gfc6165] {
+    margin: 0 15px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7);
+}
+.widget-circle-ci ol[b-2m4gfc6165] {
+    list-style-position: inside;
+}
+.widget-circle-ci li[b-2m4gfc6165] {
+    margin-bottom: 5px;
+}
+.widget-circle-ci .list-nostyle[b-2m4gfc6165] {
+    list-style: none;
+}
+.widget-circle-ci .label[b-2m4gfc6165] {
+    text-align: center;
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 24px;
+    word-wrap: break-word;
+}
+.widget-circle-ci .label.small[b-2m4gfc6165] {
+    font-size: 18px;
+}
+.widget-circle-ci .state[b-2m4gfc6165] {
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    color: #fff;
+    font-size: 40px;
+    word-wrap: break-word;
+}
+.widget-circle-ci .updated-at[b-2m4gfc6165] {
+    color: rgba(0, 0, 0, 0.3);
+}
+.widget-circle-ci .more-info[b-2m4gfc6165] {
+    color: rgba(255, 255, 255, 0.7);
+}
+.widget-circle-ci.failed[b-2m4gfc6165] {
+    background-color: #a31f1f;
+}
+.widget-circle-ci.pending[b-2m4gfc6165] {
+    background-color: #47bbb3;
+}
+.widget-circle-ci.passed[b-2m4gfc6165] {
+    background-color: #8fb347;
+}
+/* _content/Blashing.Widgets/ServerStatusSquares/ServerStatusSquareWidget.razor.rz.scp.css */
+.widget-server-status-square[b-ggz29h6moi] {
+    /*background-color: #12b0c5;*/
+    vertical-align: top;
+
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*text-align: center;*/
+    /*vertical-align: middle;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+}
+
+.widget-server-status-square .title[b-ggz29h6moi] {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
+}
+
+.widget-server-status-square .updated-at[b-ggz29h6moi] {
+    color: rgba(0, 0, 0, 0.3);
+}
