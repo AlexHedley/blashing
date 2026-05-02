@@ -34,7 +34,7 @@
 
                 <Element Row="1" Column="1" ColumnSpan="2" style="border: none; box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12)">
                     @*<div style="height: 100%; width: 100%; background-color: #dc5945"></div>*@
-                    <GraphWidget Title="Convergence" MoreInfo="" />
+                    <GraphWidget Title="Convergence" Current="65" MoreInfo="" Points="@GraphPoints" />
                 </Element>
 
             </Dashboard>
@@ -45,4 +45,5 @@
 
 @code {
     List<(string label, string value)>? Items = new() { ("Turn-key", "0"), ("Synergy", "4"), ("Exit strategy", "11"), ("Paridigm shift", "3"), ("Enterprise", "20"), ("Pivoting", "7"), ("Web 2.0", "16"), ("Leverage", "25"), ("Streamlininess", "9") };
+    List<double> GraphPoints = new() { 10, 30, 25, 50, 45, 70, 60, 80, 65 };
 }
