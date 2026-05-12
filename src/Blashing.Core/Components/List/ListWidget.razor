@@ -5,7 +5,7 @@
     
     @if (Ordered) {
     <ol>
-    @foreach (var item in Items)
+    @foreach (var item in Items ?? Enumerable.Empty<(string label, string value)>())
     {
       <li>
         <span class="label">@item.label</span>
@@ -15,7 +15,7 @@
     </ol>
     } else {
     <ul class="list-nostyle">
-    @foreach (var item in Items)
+    @foreach (var item in Items ?? Enumerable.Empty<(string label, string value)>())
     {
       <li>
         <span class="label">@item.label</span>

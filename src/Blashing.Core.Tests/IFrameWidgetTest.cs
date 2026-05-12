@@ -7,7 +7,7 @@ namespace Blashing.Core.Tests;
 public class IFrameWidgetTest : BunitContext
 {
     [Fact]
-    public void IFramekWidgetMarkupShouldContainPassedInValues()
+    public void IFrameWidgetMarkupShouldContainPassedInValues()
     {
         var url = "https://www.alexhedley.com/";
 
@@ -25,7 +25,7 @@ public class IFrameWidgetTest : BunitContext
     }
 
     [Fact]
-    public void IFramekWidgetShouldContainPassedInValues()
+    public void IFrameWidgetShouldContainPassedInValues()
     {
         var url = "https://www.alexhedley.com/";
 
@@ -33,7 +33,7 @@ public class IFrameWidgetTest : BunitContext
                 .Add(p => p.Url, url)
             );
 
-        var IFrameWidget = cut.Instance;
-        Assert.Equal(IFrameWidget.Url, url);
+        var iFrameWidget = cut.Instance;
+        Assert.Equal(iFrameWidget.Url, url);
     }
 }
