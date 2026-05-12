@@ -3,6 +3,13 @@ using Microsoft.AspNetCore.Components;
 
 namespace Blashing.Widgets.CircleCIBuildStatus;
 
+public enum CircleCIWidgetClass
+{
+    Failed,
+    Pending,
+    Passed
+}
+
 public partial class CircleCIBuildStatusWidget : BaseWidget
 {
     [Parameter]
@@ -31,9 +38,22 @@ public partial class CircleCIBuildStatusWidget : BaseWidget
     
     [Parameter]
     public string? Time { get; set; }
+
+    [Parameter]
+    public CircleCIWidgetClass? WidgetClass { get; set; }
     
     protected override void OnParametersSet()
     {
+        if (WidgetClass.HasValue && BackgroundColor == null)
+        {
+            BackgroundColor = WidgetClass.Value switch
+            {
+                CircleCIWidgetClass.Failed => "#a31f1f",
+                CircleCIWidgetClass.Pending => "#47bbb3",
+                CircleCIWidgetClass.Passed => "#8fb347",
+                _ => null
+            };
+        }
         BackgroundColor ??= "#8fb347";
     }
 }
