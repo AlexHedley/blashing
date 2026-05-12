@@ -5,19 +5,23 @@
 <Stories TComponent="GraphWidget">
 
     <ArgType For="_ => _.Title" Control="ControlType.Default" />
+    <ArgType For="_ => _.Current" Control="ControlType.Default" />
+    <ArgType For="_ => _.Prefix" Control="ControlType.Default" />
+    <ArgType For="_ => _.Suffix" Control="ControlType.Default" />
     <ArgType For="_ => _.MoreInfo" Control="ControlType.Default" />
 
     <Story Name="Default">
 
         <Arguments>
-            <Arg For="_ => _.Title" Value='"e"' />
-            <Arg For="_ => _.MoreInfo" Value='"f"' />
+            <Arg For="_ => _.Title" Value='"Convergence"' />
+            <Arg For="_ => _.Current" Value='"65"' />
+            <Arg For="_ => _.MoreInfo" Value='"at the next meeting"' />
         </Arguments>
 
         <Template>
-            <GraphWidget @attributes="context.Args">
+            <GraphWidget @attributes="context.Args"
+                         Points="@(new List<double> { 10, 30, 25, 50, 45, 70, 60, 80, 65 })">
             </GraphWidget>
-            @* <GraphWidget Title="e" MoreInfo="f" /> *@
         </Template>
 
     </Story>
