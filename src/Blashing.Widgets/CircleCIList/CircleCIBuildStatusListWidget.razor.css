@@ -1,0 +1,78 @@
+.widget.widget-circle-ci-list {
+    background-color: #444;
+    padding: 0px;
+    vertical-align: top;
+}
+
+.widget.widget-circle-ci-list img.background {
+    width: 100% !important;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    opacity: 0.05;
+}
+
+.widget.widget-circle-ci-list .title {
+    color: rgba(255, 255, 255, 1);
+}
+
+.widget.widget-circle-ci-list ol, .widget.widget-circle-ci-list ul {
+    margin: 0px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.widget.widget-circle-ci-list ol {
+    list-style-position: inside;
+}
+
+.widget.widget-circle-ci-list li {
+    margin-bottom: 5px;
+}
+
+.widget.widget-circle-ci-list .items {
+    list-style: none;
+}
+
+.widget.widget-circle-ci-list .items li {
+    margin-top: 5px;
+}
+
+.widget.widget-circle-ci-list .items li.failed {
+    background-color: #a31f1f;
+}
+
+.widget.widget-circle-ci-list .items li.pending {
+    background-color: #47bbb3;
+}
+
+.widget.widget-circle-ci-list .items li.passed {
+    background-color: #8fb347;
+}
+
+.widget.widget-circle-ci-list .items li .label {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+.widget.widget-circle-ci-list .items li .label.repo {
+    float: left;
+    text-align: left;
+    padding: 5px 0px 5px 10px;
+}
+
+.widget.widget-circle-ci-list .items li .label.branch {
+    float: left;
+    text-align: left;
+    padding-top: 10px;
+    font-size: 14px;
+    padding: 11px 0px 5px 5px;
+}
+
+.widget.widget-circle-ci-list .items li .avatar {
+    float: right;
+    text-align: right;
+    width: 40px;
+}
