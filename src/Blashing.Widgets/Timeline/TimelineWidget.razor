@@ -1,0 +1,19 @@
+@inherits Blashing.Core.Components.BaseWidget;
+
+<div class="widget-timeline" style="background-color:@BackgroundColor">
+    <h1 class="title">@Title</h1>
+
+    <ul class="timeline-list">
+        @foreach (var item in Items ?? Enumerable.Empty<TimelineItem>())
+        {
+            <li class="timeline-event">
+                <span class="event-description-date">@item.Date</span>
+                <div class="timeline-dot" style="@(!string.IsNullOrEmpty(item.Color) ? $"background-color:{item.Color};" : "")"></div>
+                <span class="event-description">@item.Title</span>
+            </li>
+        }
+    </ul>
+
+    <p class="more-info">@MoreInfo</p>
+    <p class="updated-at">@UpdatedAtMessage</p>
+</div>
