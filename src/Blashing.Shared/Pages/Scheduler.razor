@@ -1,0 +1,103 @@
+@using Excubo.Blazor.Grids
+@implements IAsyncDisposable
+
+@page "/scheduler"
+
+<PageTitle>Scheduler</PageTitle>
+
+<h3>Scheduler</h3>
+
+<p>
+    This page demonstrates widgets updating on a schedule using a
+    <a href="https://learn.microsoft.com/en-us/dotnet/api/system.threading.periodictimer" target="_blank">PeriodicTimer</a>,
+    similar to how Dashing/Smashing jobs push data to widgets (e.g. <code>SCHEDULER.every '5s'</code>).
+</p>
+
+<Dashboard RowGap="1em" ColumnGap="1em" AspectRatio="1.5" ColumnCount="3" style="height: 500px; background-color: black;">
+
+    <Element Row="0" Column="0" style="border: none; box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,.12)">
+        <ClockWidget Date="@_date" Time="@_time" />
+    </Element>
+
+    <Element Row="0" Column="1" style="border: none; box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,.12)">
+        <NumberWidget
+            Title="Request Count"
+            Current="@_requestCount.ToString()"
+            Difference="@($"+{_requestDelta}")"
+            MoreInfo="requests per interval"
+            UpdatedAtMessage="@_updatedAt" />
+    </Element>
+
+    <Element Row="0" Column="2" style="border: none; box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,.12)">
+        <TextWidget
+            Title="Scheduler Status"
+            Text="@_statusText"
+            MoreInfo="ticks every 5 seconds"
+            UpdatedAtMessage="@_updatedAt" />
+    </Element>
+
+</Dashboard>
+
+@code {
+    // Clock — updates every second
+    private string _date = string.Empty;
+    private string _time = string.Empty;
+    private PeriodicTimer? _clockTimer;
+    private Task? _clockTask;
+
+    // NumberWidget counter — updates every 5 seconds
+    private int _requestCount = 0;
+    private int _requestDelta = 0;
+    private string _statusText = "Running";
+    private string _updatedAt = string.Empty;
+    private PeriodicTimer? _dataTimer;
+    private Task? _dataTask;
+
+    private readonly Random _random = new();
+
+    protected override void OnInitialized()
+    {
+        var now = DateTime.Now;
+        _date = now.ToString("dd/MM/yyyy");
+        _time = now.ToString("HH:mm:ss");
+        _updatedAt = $"Last updated at {now:HH:mm:ss}";
+
+        _clockTimer = new PeriodicTimer(TimeSpan.FromSeconds(1));
+        _clockTask = RunClockAsync();
+
+        _dataTimer = new PeriodicTimer(TimeSpan.FromSeconds(5));
+        _dataTask = RunDataAsync();
+    }
+
+    private async Task RunClockAsync()
+    {
+        while (_clockTimer is not null &&
+               await _clockTimer.WaitForNextTickAsync())
+        {
+            _date = DateTime.Now.ToString("dd/MM/yyyy");
+            _time = DateTime.Now.ToString("HH:mm:ss");
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    private async Task RunDataAsync()
+    {
+        while (_dataTimer is not null &&
+               await _dataTimer.WaitForNextTickAsync())
+        {
+            _requestDelta = _random.Next(1, 50);
+            _requestCount += _requestDelta;
+            _updatedAt = $"Last updated at {DateTime.Now:HH:mm:ss}";
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        _clockTimer?.Dispose();
+        _dataTimer?.Dispose();
+
+        if (_clockTask is not null) await _clockTask.ConfigureAwait(ConfigureAwaitOptions.SuppressThrowing);
+        if (_dataTask is not null) await _dataTask.ConfigureAwait(ConfigureAwaitOptions.SuppressThrowing);
+    }
+}
