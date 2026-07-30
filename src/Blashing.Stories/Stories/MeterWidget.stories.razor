@@ -7,6 +7,12 @@
     <ArgType For="_ => _.Title" Control="ControlType.Default" />
     <ArgType For="_ => _.MoreInfo" Control="ControlType.Default" />
     <ArgType For="_ => _.UpdatedAtMessage" Control="ControlType.Default" />
+    <ArgType For="_ => _.Value" Control="ControlType.Default" />
+    <ArgType For="_ => _.Min" Control="ControlType.Default" />
+    <ArgType For="_ => _.Max" Control="ControlType.Default" />
+    <ArgType For="_ => _.DisplayInput" Control="ControlType.Default" />
+    <ArgType For="_ => _.Prefix" Control="ControlType.Default" />
+    <ArgType For="_ => _.Suffix" Control="ControlType.Default" />
 
     <Story Name="Default">
 
@@ -14,12 +20,33 @@
             <Arg For="_ => _.Title" Value='"Meter Title"' />
             <Arg For="_ => _.MoreInfo" Value='"Meter More Info"' />
             <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+            <Arg For="_ => _.Value" Value="75" />
+            <Arg For="_ => _.Min" Value="0" />
+            <Arg For="_ => _.Max" Value="100" />
         </Arguments>
 
         <Template>
-            <MeterWidget @attributes="context.Args">
-            </MeterWidget>
-            @* <MeterWidget Title="Meter Title" MoreInfo="Meter More Info" UpdatedAtMessage="@DateTime.Now.ToLongDateString()"  *@
+            <MeterWidget @attributes="context.Args" />
+        </Template>
+
+    </Story>
+
+    <Story Name="Disable Display Input">
+
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"Disable display input"' />
+            <Arg For="_ => _.MoreInfo" Value='"Meter More Info"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+            <Arg For="_ => _.Value" Value="50" />
+            <Arg For="_ => _.Min" Value="0" />
+            <Arg For="_ => _.Max" Value="100" />
+            <Arg For="_ => _.Width" Value="100" />
+            <Arg For="_ => _.Height" Value="100" />
+            <Arg For="_ => _.DisplayInput" Value="false" />
+        </Arguments>
+
+        <Template>
+            <MeterWidget @attributes="context.Args" />
         </Template>
 
     </Story>
