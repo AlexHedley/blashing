@@ -7,7 +7,7 @@ namespace Blashing.Core.Tests;
 public class ListWidgetTest : BunitContext
 {
     [Fact]
-    public void TextWidgetMarkupShouldContainPassedInValues()
+    public void ListWidgetMarkupShouldContainPassedInValues()
     {
         var title = "a";
         var moreInfo = "c";
@@ -59,7 +59,7 @@ public class ListWidgetTest : BunitContext
     }
 
     [Fact]
-    public void TextWidgetShouldContainPassedInValues()
+    public void ListWidgetShouldContainPassedInValues()
     {
         var title = "a";
         var moreInfo = "c";
@@ -73,10 +73,10 @@ public class ListWidgetTest : BunitContext
             .Add(p => p.Items, items)
         );
 
-        var textWidget = cut.Instance;
-        Assert.Equal(textWidget.Title, title);
-        Assert.Equal(textWidget.MoreInfo, moreInfo);
-        Assert.Equal(textWidget.UpdatedAtMessage, updatedAtMessage);
-        Assert.Equal(textWidget.Items, items);
+        var listWidget = cut.Instance;
+        Assert.Equal(listWidget.Title, title);
+        Assert.Equal(listWidget.MoreInfo, moreInfo);
+        Assert.Equal(listWidget.UpdatedAtMessage, updatedAtMessage);
+        Assert.Equal(listWidget.Items, items);
     }
 }
