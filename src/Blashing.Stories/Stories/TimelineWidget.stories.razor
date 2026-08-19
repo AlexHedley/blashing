@@ -1,0 +1,27 @@
+@using Blashing.Widgets.Timeline
+
+@attribute [Stories("Example/Timeline")]
+
+<Stories TComponent="TimelineWidget">
+
+    <ArgType For="_ => _.Title" Control="ControlType.Default" />
+    <ArgType For="_ => _.MoreInfo" Control="ControlType.Default" />
+    <ArgType For="_ => _.UpdatedAtMessage" Control="ControlType.Default" />
+
+    <Story Name="Default">
+
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"Timeline"' />
+            <Arg For="_ => _.MoreInfo" Value='"Today"' />
+            <Arg For="_ => _.UpdatedAtMessage" Value='@DateTime.Now.ToLongDateString()' />
+            <Arg For="_ => _.Items" Value='@(new List<TimelineItem> { new("09:00", "Stand-up"), new("10:30", "Code Review"), new("14:00", "Deploy"), new("16:30", "Retrospective") })' />
+        </Arguments>
+
+        <Template>
+            <TimelineWidget @attributes="context.Args">
+            </TimelineWidget>
+        </Template>
+
+    </Story>
+
+</Stories>
