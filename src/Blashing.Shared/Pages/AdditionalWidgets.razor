@@ -29,7 +29,7 @@
                 State="SUCCESS"
                 Time="1h 36m ago"
                 UpdatedAtMessage="Last updated at 0:00"
-                BackgroundColor="#8fb347">
+                WidgetClass="@CircleCIWidgetClass.Passed">
             </CircleCIBuildStatusWidget>
             
         </div>
@@ -45,11 +45,11 @@
     </Element>
     
     <Element Row="0" Column="1">
-        <ServerStatusSquareWidget Title="Success" UpdatedAtMessage="Last updated at 0:00" BackgroundColor="#96BF48"></ServerStatusSquareWidget>
+        <ServerStatusSquareWidget Title="Success" UpdatedAtMessage="Last updated at 0:00" Result="true"></ServerStatusSquareWidget>
     </Element>
     
     <Element Row="0" Column="2">
-        <ServerStatusSquareWidget Title="Failed" UpdatedAtMessage="Last updated at 0:00" BackgroundColor="#BF4848"></ServerStatusSquareWidget>
+        <ServerStatusSquareWidget Title="Failed" UpdatedAtMessage="Last updated at 0:00" Result="false"></ServerStatusSquareWidget>
     </Element>
     
     <Element Row="1" Column="0">
@@ -62,7 +62,7 @@
             State="SUCCESS"
             Time="1h 36m ago"
             UpdatedAtMessage="Last updated at 0:00"
-            BackgroundColor="#8fb347">
+            WidgetClass="@CircleCIWidgetClass.Passed">
         </CircleCIBuildStatusWidget>
     </Element>
     
