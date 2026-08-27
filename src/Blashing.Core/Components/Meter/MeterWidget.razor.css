@@ -1,22 +1,30 @@
 ﻿.widget-meter {
-    /*background-color: #9c4274;*/
     height: 100%;
     width: 100%;
     text-align: center;
-    /*    width: inherit;*/
-    /*    height: inherit;*/
-    /*    display: table-cell;*/
     vertical-align: middle;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*align-items: center;*/
+    align-items: center;
 }
 
-input.meter {
-    background-color: #9c4274; /*darken(#9c4274, 15%);*/
-    color: #fff;
-    filter: brightness(0.85);
+svg.meter {
+    overflow: visible;
+}
+
+path.meter-background {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.2);
+}
+
+path.meter-value {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+}
+
+text.meter-text {
+    fill: white;
 }
 
 .title {
