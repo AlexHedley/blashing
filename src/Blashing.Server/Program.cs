@@ -1,8 +1,17 @@
+using Blashing.Server.Jobs;
+using Blashing.Server.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+
+// Register scheduler jobs (add more IJob implementations here as needed).
+builder.Services.AddSingleton<IJob, SampleJob>();
+
+// Register the hosted scheduler service that runs all IJob implementations.
+builder.Services.AddHostedService<SchedulerService>();
 
 var app = builder.Build();
 
