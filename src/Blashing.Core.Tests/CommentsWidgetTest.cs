@@ -52,9 +52,9 @@ public class CommentsWidgetTest : BunitContext
                 .Add(p => p.MoreInfo, moreInfo)
             );
 
-        var textWidget = cut.Instance;
-        Assert.Equal(textWidget.Title, title);
-        Assert.Equal(textWidget.Quote, quote);
-        Assert.Equal(textWidget.MoreInfo, moreInfo);
+        var commentsWidget = cut.Instance;
+        Assert.Equal(commentsWidget.Title, title);
+        Assert.Equal(commentsWidget.Quote, quote);
+        Assert.Equal(commentsWidget.MoreInfo, moreInfo);
     }
 }
