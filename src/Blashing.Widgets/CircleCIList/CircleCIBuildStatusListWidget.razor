@@ -1,0 +1,19 @@
+@inherits Blashing.Core.Components.BaseWidget;
+
+<div class="widget widget-circle-ci-list"> <!--style="background-color:@BackgroundColor"-->
+    <h1 class="title">@Title</h1>
+
+    <img class="background" src="_content/Blashing.Widgets/images/logo-circle-ci.png">
+
+    <ul class="items list-nostyle">
+        @foreach (var item in Items)
+        {
+        <li class="item" style="background-color:@item.BackgroundColor">
+            <span class="label repo" data-bind="item.repo">@item.Repo</span>
+            <span class="label branch" data-bind="item.branch">@item.Branch</span>
+            <img class="avatar" src="@item.AvatarUrl" />
+            <div class="clearfix"/>
+        </li>
+        }
+    </ul>
+</div>
