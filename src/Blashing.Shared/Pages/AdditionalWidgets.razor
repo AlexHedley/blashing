@@ -34,12 +34,25 @@
             
         </div>
     </div>
+    
+    <div class="row">
+        <div class="col">
+
+            <h2>Circle CI List</h2>
+            <CircleCIBuildStatusListWidget 
+                Title="Build Status"
+                Items="@Items">
+            </CircleCIBuildStatusListWidget>
+
+        </div>
+    </div>
 </div>
         
 <hr />
 
 <Dashboard RowGap="1em" ColumnGap="1em" AspectRatio="1.5" ColumnCount="3" style="height: 750px; background-color: black;">
     
+    <!-- Row 0 -->
     <Element Row="0" Column="0">
         <ServerStatusSquareWidget Title="Server Status Square" UpdatedAtMessage="Last updated at 0:00"></ServerStatusSquareWidget>
     </Element>
@@ -52,6 +65,7 @@
         <ServerStatusSquareWidget Title="Failed" UpdatedAtMessage="Last updated at 0:00" BackgroundColor="#BF4848"></ServerStatusSquareWidget>
     </Element>
     
+    <!-- Row 1 -->
     <Element Row="1" Column="0">
         <CircleCIBuildStatusWidget
             Title="GoCardless"
@@ -65,5 +79,17 @@
             BackgroundColor="#8fb347">
         </CircleCIBuildStatusWidget>
     </Element>
+    
+    <Element Row="1" Column="1">
+    </Element>
+    
+    <Element Row="1" Column="2">
+        <CircleCIBuildStatusListWidget 
+            Title="Build Status"
+            Items="@Items">
+        </CircleCIBuildStatusListWidget>
+    </Element>
+    
+    <!-- Row 2 -->
     
 </Dashboard>
