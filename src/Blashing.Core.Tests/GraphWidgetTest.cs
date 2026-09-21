@@ -7,7 +7,7 @@ namespace Blashing.Core.Tests;
 public class GraphWidgetTest : BunitContext
 {
     [Fact]
-    public void CommentsWidgetMarkupShouldContainPassedInValues()
+    public void GraphWidgetMarkupShouldContainPassedInValues()
     {
         var title = "Graph 1";
         var moreInfo = "This graph contains lots of useful data";
@@ -30,7 +30,7 @@ public class GraphWidgetTest : BunitContext
     }
 
     [Fact]
-    public void CommentsWidgetShouldContainPassedInValues()
+    public void GraphWidgetShouldContainPassedInValues()
     {
         var title = "Graph 1";
         var moreInfo = "This graph contains lots of useful data";
