@@ -20,6 +20,8 @@ svg {
     fill-opacity: 0.4;
     left: 0px;
     top: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 .title, .value {

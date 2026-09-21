@@ -16,7 +16,7 @@
 
 <br />
 
-<GraphWidget Title="Graph Widget" MoreInfo="f" />
+<GraphWidget Title="Graph Widget" Current="65" MoreInfo="f" Points="@GraphPoints" />
 
 <br />
 
@@ -42,4 +42,5 @@
 
 @code {
     List<(string label, string value)>? Items = new() { ("a", "b"), ("c", "d") };
+    List<double> GraphPoints = new() { 10, 30, 25, 50, 45, 70, 60, 80, 65 };
 }
