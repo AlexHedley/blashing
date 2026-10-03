@@ -19,11 +19,21 @@ siteNav?.querySelectorAll("a").forEach((link) => {
 document.querySelector(".copy-button")?.addEventListener("click", async (event) => {
   const button = event.currentTarget;
   const originalLabel = button.innerHTML;
+  const snippet = button.dataset.copy;
   try {
-    await navigator.clipboard.writeText(button.dataset.copy);
+    await navigator.clipboard.writeText(snippet);
     button.textContent = "COPIED ✓";
   } catch {
-    button.textContent = "SELECT TO COPY";
+    const fallback = document.createElement("textarea");
+    fallback.value = snippet;
+    fallback.setAttribute("readonly", "");
+    fallback.style.position = "fixed";
+    fallback.style.opacity = "0";
+    document.body.append(fallback);
+    fallback.select();
+    const copied = document.execCommand("copy");
+    fallback.remove();
+    button.textContent = copied ? "COPIED ✓" : "COPY FAILED";
   }
   window.setTimeout(() => {
     button.innerHTML = originalLabel;
