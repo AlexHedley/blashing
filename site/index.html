@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#19152b">
+  <meta name="description" content="Blashing is an open-source collection of Blazor dashboard widgets for building dashboards that make your data shine.">
+  <title>Blashing — dashboards that make data shine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Blashing home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>blashing<span class="brand-period">.</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="#widgets">Widgets</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#get-started">Get started</a>
+      <a class="nav-github" href="https://github.com/AlexHedley/blashing" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> OPEN-SOURCE DASHBOARD WIDGETS</p>
+        <h1>Make your data<br>feel <span>at home.</span></h1>
+        <p class="hero-description">A colorful collection of Blazor widgets to bring your team's numbers, updates, and good ideas together in one place.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/AlexHedley/blashing" target="_blank" rel="noreferrer">Explore the project <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#widgets">Meet the widgets <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-note"><span class="note-stars" aria-hidden="true">✳</span> A Blazor take on the Dashing / Smashing spirit.</div>
+      </div>
+
+      <div class="dashboard-wrap" aria-label="Illustration of a Blashing dashboard">
+        <div class="dashboard-window">
+          <div class="window-bar">
+            <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span class="window-label">YOUR TEAM, AT A GLANCE</span>
+            <span class="window-menu" aria-hidden="true">···</span>
+          </div>
+          <div class="dashboard-grid">
+            <article class="dash-card intro-card">
+              <span class="card-label">MONDAY, OCTOBER 05</span>
+              <h2>Good things<br>are happening.</h2>
+              <span class="card-foot">A little clarity goes a long way <b>↗</b></span>
+              <span class="sunburst" aria-hidden="true">✳</span>
+            </article>
+            <article class="dash-card number-card">
+              <span class="card-label">WEEKLY MOMENTUM</span>
+              <strong>84<span>%</span></strong>
+              <span class="trend"><span>↗ 12%</span> vs. last week</span>
+              <div class="sparkline" aria-label="A rising weekly trend"><i style="--h:32%"></i><i style="--h:47%"></i><i style="--h:40%"></i><i style="--h:65%"></i><i style="--h:57%"></i><i style="--h:82%"></i><i style="--h:100%"></i></div>
+            </article>
+            <article class="dash-card status-card">
+              <span class="card-label">SERVICE STATUS</span>
+              <span class="status-light"><i></i> All systems go</span>
+              <span class="status-caption">Everything's looking good.</span>
+              <div class="status-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </article>
+            <article class="dash-card list-card">
+              <span class="card-label">ON THE RADAR</span>
+              <ul>
+                <li><span class="task-check">✓</span><span>Ship the little things</span><b>01</b></li>
+                <li><span class="task-check">✓</span><span>Share a team win</span><b>02</b></li>
+                <li><span class="task-check pending"></span><span>Make room to focus</span><b>03</b></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div class="float-tag tag-top"><span>✳</span> BUILT TO BE YOURS</div>
+        <div class="float-tag tag-bottom"><span class="tiny-bars">▂▄▆</span> LITTLE WIDGETS, BIG PICTURE</div>
+      </div>
+      <a class="scroll-cue" href="#widgets"><span></span> SCROLL TO EXPLORE</a>
+    </section>
+
+    <section class="ticker" aria-label="Widget highlights">
+      <div class="ticker-track">
+        <span>TEXT</span><b>✳</b><span>NUMBERS</span><b>✳</b><span>GRAPHS</span><b>✳</b><span>STATUS</span><b>✳</b><span>YOUR NEXT BIG IDEA</span><b>✳</b>
+        <span aria-hidden="true">TEXT</span><b aria-hidden="true">✳</b><span aria-hidden="true">NUMBERS</span><b aria-hidden="true">✳</b><span aria-hidden="true">GRAPHS</span><b aria-hidden="true">✳</b><span aria-hidden="true">STATUS</span><b aria-hidden="true">✳</b><span aria-hidden="true">YOUR NEXT BIG IDEA</span><b aria-hidden="true">✳</b>
+      </div>
+    </section>
+
+    <section class="section widgets-section" id="widgets">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow-dark">A DASHBOARD TOOLKIT</p>
+          <h2>Small pieces.<br><span>Big picture.</span></h2>
+        </div>
+        <p class="section-intro">Start with the essentials, arrange them around your team's needs, and make a dashboard that feels like yours.</p>
+      </div>
+      <div class="widget-grid">
+        <article class="widget-tile tile-text"><span class="tile-icon">Aa</span><span class="tile-count">01</span><h3>Say it simply.</h3><p>Share a note, quote, or the one thing everyone needs to know.</p><span class="tile-type">TEXT · COMMENTS</span></article>
+        <article class="widget-tile tile-number"><span class="tile-icon">↗</span><span class="tile-count">02</span><h3>See the numbers.</h3><p>Give important metrics a little context and a lot of visibility.</p><span class="tile-type">NUMBER · METER</span></article>
+        <article class="widget-tile tile-graph"><span class="tile-icon">⌁</span><span class="tile-count">03</span><h3>Spot the shape.</h3><p>Turn a changing signal into a trend people can understand.</p><span class="tile-type">GRAPH · CLOCK</span></article>
+        <article class="widget-tile tile-list"><span class="tile-icon">☷</span><span class="tile-count">04</span><h3>Keep it moving.</h3><p>Bring lists, images, and useful links into the same view.</p><span class="tile-type">LIST · IMAGE · IFRAME</span></article>
+        <article class="widget-tile tile-status"><span class="tile-icon">●</span><span class="tile-count">05</span><h3>Know what's up.</h3><p>Put build health and server status where the team can see it.</p><span class="tile-type">SERVER · BUILD STATUS</span></article>
+      </div>
+      <div class="widget-footer"><span>And there's room for the widget you haven't dreamed up yet.</span><a href="https://github.com/AlexHedley/blashing/tree/main/src/Blashing.Core/Components" target="_blank" rel="noreferrer">Browse the components <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="use-section" id="how-it-works">
+      <div class="use-inner">
+        <div class="use-copy">
+          <p class="eyebrow">MAKE IT USEFUL</p>
+          <h2>One glance.<br><span>Less guesswork.</span></h2>
+          <p>Build a home for the information your team checks every day. Blashing's widgets are Blazor components, so you can use them in your app and shape the dashboard around the way you work.</p>
+          <a class="button button-light" href="https://github.com/AlexHedley/blashing/tree/main/src/Blashing.Stories/Stories" target="_blank" rel="noreferrer">See widget examples <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="use-cases">
+          <article><span class="case-index">01 / TEAM PULSE</span><h3>Make the work visible.</h3><p>Milestones, team wins, and the metric you're moving together.</p><span class="case-symbol" aria-hidden="true">↗</span></article>
+          <article><span class="case-index">02 / SERVICE HEALTH</span><h3>Keep a calm eye on things.</h3><p>Build status and server signals surfaced in one shared view.</p><span class="case-symbol" aria-hidden="true">◉</span></article>
+          <article><span class="case-index">03 / PROJECT ROOM</span><h3>Give a project its own space.</h3><p>Progress, useful links, and the next step—right where people need them.</p><span class="case-symbol" aria-hidden="true">✳</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section start-section" id="get-started">
+      <div class="start-heading">
+        <p class="eyebrow eyebrow-dark">YOUR DASHBOARD STARTS HERE</p>
+        <h2>Bring your data.<br><span>We'll bring the widgets.</span></h2>
+        <p>Blashing is open source and built with Blazor. Take a look around, pick a widget, and make it your own.</p>
+      </div>
+      <div class="start-card">
+        <div class="start-steps">
+          <div><span>01</span><p><b>Explore the live app</b><br>See the widgets together in a working dashboard.</p></div>
+          <div><span>02</span><p><b>Choose your building blocks</b><br>Browse the core components and community additions.</p></div>
+          <div><span>03</span><p><b>Make a dashboard yours</b><br>Use the examples as a starting point in your Blazor app.</p></div>
+        </div>
+        <div class="code-card">
+          <div class="code-top"><span>YOUR-DASHBOARD.razor</span><button class="copy-button" type="button" data-copy="&lt;NumberWidget Title=&quot;Weekly signups&quot; Current=&quot;128&quot; Difference=&quot;+12%&quot; /&gt;">COPY <span aria-hidden="true">▣</span></button></div>
+          <pre><code><span class="code-tag">&lt;NumberWidget</span>
+  <span class="code-attr">Title</span>=<span class="code-string">"Weekly signups"</span>
+  <span class="code-attr">Current</span>=<span class="code-string">"128"</span>
+  <span class="code-attr">Difference</span>=<span class="code-string">"+12%"</span>
+<span class="code-tag">/&gt;</span></code></pre>
+          <p class="code-caption"><span>✳</span> A little Razor, a much clearer picture.</p>
+        </div>
+      </div>
+      <div class="start-actions">
+        <a class="button button-dark" href="https://alexhedley.github.io/blashing/" target="_blank" rel="noreferrer">Open the Blashing app <span aria-hidden="true">↗</span></a>
+        <a class="button button-outline" href="https://github.com/AlexHedley/blashing" target="_blank" rel="noreferrer">Visit GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#top" aria-label="Blashing, back to top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>blashing<span class="brand-period">.</span></span></a>
+    <p>Open source, built for the bigger picture.</p>
+    <a href="https://github.com/AlexHedley/blashing" target="_blank" rel="noreferrer">MADE WITH ✳ AND BLAZOR <span aria-hidden="true">↗</span></a>
+  </footer>
+</body>
+</html>

@@ -18,3 +18,13 @@
 ![Progress](progress/progress.png "progress")
 
 ![Original Screenshot](progress/original_screenshot.png "Original Screenshot")
+
+## Site screenshots
+
+Desktop view of the Blashing introduction site:
+
+![Blashing site desktop screenshot](site-desktop.png "Blashing site — desktop")
+
+Mobile view of the Blashing introduction site:
+
+![Blashing site mobile screenshot](site-mobile.png "Blashing site — mobile")
