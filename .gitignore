@@ -11,3 +11,4 @@ release/
 
 **/coveragereport/**/**
 src/**/coverage.json
+nohup.out

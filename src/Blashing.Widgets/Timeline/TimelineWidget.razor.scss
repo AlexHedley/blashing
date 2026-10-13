@@ -1,0 +1,90 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #4b4b4b;
+$timeline-color:    #E8F770;
+$dot-color:         #E8F770;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.7);
+
+// ----------------------------------------------------------------------------
+// Widget-timeline styles
+// ----------------------------------------------------------------------------
+.widget-timeline {
+
+  background-color: $background-color;
+  padding-bottom: 70px;
+  overflow-y: auto;
+
+  .title {
+    color: $title-color;
+  }
+
+  .more-info {
+    color: $moreinfo-color;
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .timeline-list {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0;
+    position: relative;
+
+    // vertical line through the centre of the dots
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      transform: translateX(-50%);
+      background: $timeline-color;
+    }
+  }
+
+  .timeline-event {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    position: relative;
+
+    // left column: date
+    .event-description-date {
+      flex: 1;
+      text-align: right;
+      padding-right: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    // centre: dot
+    .timeline-dot {
+      flex-shrink: 0;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: $dot-color;
+      z-index: 1;
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+    }
+
+    // right column: title
+    .event-description {
+      flex: 1;
+      padding-left: 14px;
+      color: white;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+}
