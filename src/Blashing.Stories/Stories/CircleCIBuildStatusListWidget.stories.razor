@@ -1,0 +1,29 @@
+@using Blashing.Widgets.CircleCIList
+
+@attribute [Stories("Example/Circle CI List")]
+
+<Stories TComponent="CircleCIBuildStatusListWidget">
+
+    <ArgType For="_ => _.Title" Control="ControlType.Default" />
+    <ArgType For="_ => _.Items" Control="ControlType.Default" />
+
+    <Story Name="Default">
+
+        <Arguments>
+            <Arg For="_ => _.Title" Value='"Circle CI"' />
+            <Arg For="_ => _.Items" Value='[ 
+                     new CircleCIDetails { Repo = "gocardless", Branch = "dev", AvatarUrl = "https://gravatar.com/avatar/3184635da54b04bd362f09bad9aced67?s=200&d=robohash", BackgroundColor = "#a31f1f" }, 
+                     new CircleCIDetails { Repo = "dashboard", Branch = "main", AvatarUrl = "https://gravatar.com/avatar/3184635da54b04bd362f09bad9aced67?s=200&d=retro", BackgroundColor = "#47bbb3" },
+                     new CircleCIDetails { Repo = "payments-client", Branch = "feature", AvatarUrl = "https://gravatar.com/avatar/3184635da54b04bd362f09bad9aced67?s=200&d=wavatar", BackgroundColor = "#8fb347" }
+                 ]' />
+        </Arguments>
+
+        <Template>
+            <CircleCIBuildStatusListWidget @attributes="context.Args">
+            </CircleCIBuildStatusListWidget>
+            @* <CircleCIBuildStatusListWidget Title="a" Items="[]" /> *@
+        </Template>
+
+    </Story>
+    
+</Stories>
