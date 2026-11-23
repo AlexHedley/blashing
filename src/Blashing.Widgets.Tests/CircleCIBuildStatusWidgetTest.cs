@@ -68,7 +68,7 @@ public class CircleCIBuildStatusWidgetTest : BunitContext
         var expectedCommitBodyMarkup = $"<span class=\"label small commit-body\">{commitBody}</span>";
         cut.FindAll("span")[2].MarkupMatches(expectedCommitBodyMarkup);
         
-        var expectedStateMarkup = $"<h2 class=\"state\">{state}</h1>";
+        var expectedStateMarkup = $"<h2 class=\"state\">{state}</h2>";
         cut.FindAll("h2")[0].MarkupMatches(expectedStateMarkup);
         
         var expectedTimeMarkup = $"<span class=\"label small\">{time}</span>";
