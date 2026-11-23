@@ -117,4 +117,56 @@ public class CircleCIBuildStatusWidgetTest : BunitContext
         Assert.Equal(circleCIBuildStatusWidget.State, state);
         Assert.Equal(circleCIBuildStatusWidget.Time, time);
     }
+
+    [Fact]
+    public void CircleCIBuildStatusWidgetWidgetClassFailedShouldSetRedBackgroundColor()
+    {
+        var cut = Render<CircleCIBuildStatusWidget>(parameters => parameters
+            .Add(p => p.Title, "Payment Service")
+            .Add(p => p.WidgetClass, CircleCIWidgetClass.Failed)
+        );
+
+        var circleCIBuildStatusWidget = cut.Instance;
+        Assert.Equal(CircleCIWidgetClass.Failed, circleCIBuildStatusWidget.WidgetClass);
+        Assert.Equal("#a31f1f", circleCIBuildStatusWidget.BackgroundColor);
+    }
+
+    [Fact]
+    public void CircleCIBuildStatusWidgetWidgetClassPendingShouldSetPendingBackgroundColor()
+    {
+        var cut = Render<CircleCIBuildStatusWidget>(parameters => parameters
+            .Add(p => p.Title, "Dashboard")
+            .Add(p => p.WidgetClass, CircleCIWidgetClass.Pending)
+        );
+
+        var circleCIBuildStatusWidget = cut.Instance;
+        Assert.Equal(CircleCIWidgetClass.Pending, circleCIBuildStatusWidget.WidgetClass);
+        Assert.Equal("#47bbb3", circleCIBuildStatusWidget.BackgroundColor);
+    }
+
+    [Fact]
+    public void CircleCIBuildStatusWidgetWidgetClassPassedShouldSetGreenBackgroundColor()
+    {
+        var cut = Render<CircleCIBuildStatusWidget>(parameters => parameters
+            .Add(p => p.Title, "GoCardless")
+            .Add(p => p.WidgetClass, CircleCIWidgetClass.Passed)
+        );
+
+        var circleCIBuildStatusWidget = cut.Instance;
+        Assert.Equal(CircleCIWidgetClass.Passed, circleCIBuildStatusWidget.WidgetClass);
+        Assert.Equal("#8fb347", circleCIBuildStatusWidget.BackgroundColor);
+    }
+
+    [Fact]
+    public void CircleCIBuildStatusWidgetExplicitBackgroundColorOverridesWidgetClass()
+    {
+        var cut = Render<CircleCIBuildStatusWidget>(parameters => parameters
+            .Add(p => p.Title, "GoCardless")
+            .Add(p => p.WidgetClass, CircleCIWidgetClass.Failed)
+            .Add(p => p.BackgroundColor, "#123456")
+        );
+
+        var circleCIBuildStatusWidget = cut.Instance;
+        Assert.Equal("#123456", circleCIBuildStatusWidget.BackgroundColor);
+    }
 }
